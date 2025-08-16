@@ -1,8 +1,9 @@
-// import LandingPage from "./landing";
+import Hero from "@/components/Hero";
 
-export default function Home() {
+export default function Landing() {
   return (
-    <div></div>
-    // <LandingPage/>
+    <>
+      <Hero/>
+    </>
   );
 }

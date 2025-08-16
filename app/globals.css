@@ -7,8 +7,14 @@
   --font-quantico: 'Quantico', sans-serif;
 }
 
+*{
+  box-sizing: content-box;
+}
 body {
+  padding: 0 0;
+  margin: 0 0;
   font-family: var(--font-poppins);
+  box-sizing: content-box;
 }
 
 .font-quantico {

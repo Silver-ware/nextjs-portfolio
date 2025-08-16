@@ -34,22 +34,22 @@ export default function Navbar() {
           <NavigationMenuList className="inline-flex h-[50px] items-center justify-end gap-2.5 p-2.5">
             {navigationItems.map((item, index) => (
               <NavigationMenuItem key={index}>
-                <NavigationMenuLink
-                  className={`inline-flex items-center gap-2.5 px-2.5 py-[3px] border-b border-solid cursor-pointer rounded-none hover:border-green-500 transition-all duration-200 ease-in-out ${
-                    item.active ? "border-green-500" : "border-[#1a1a1a]"
-                  }`}
-                >
-                  <div className="relative w-fit mt-[-1.00px] font-semibold text-[#e2e2e2] hover:text-green-500 text-xl tracking-[0] leading-[normal]">
-                    {item.name}
-                  </div>
-                </NavigationMenuLink>
+                  <NavigationMenuLink
+                    className={`inline-flex items-center gap-2.5 px-2.5 py-[3px] border-b border-solid cursor-pointer rounded-none text-[#e2e2e2] transition-all duration-200 ease-in-out ${
+                      item.active ? "border-green-500" : "border-[#1a1a1a]"
+                    } hover:border-green-500 hover:text-green-500`}
+                  >
+                    <div className="relative w-fit mt-[-1px] font-medium text-xl tracking-[0] leading-[normal] group-">
+                      {item.name}
+                    </div>
+                  </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
         </NavigationMenu>
 
         <div className="inline-flex items-center justify-center gap-7 pl-0 pr-[5px] py-0">
-          <div className="relative inline-flex items-center w-[35px] h-[30px] justify-center gap-2.5 px-[5px] py-0">
+          <div className="relative inline-flex items-center w-[32px] h-[30px] justify-center gap-2.5 px-[5px] py-0">
             <Image
               src="/assets/icons/darkmodecv.png"
               alt="cv-icon"
@@ -57,7 +57,7 @@ export default function Navbar() {
               fill
             />
           </div>
-          <div className="relative w-[35px] h-[35px]">
+          <div className="relative w-[32px] h-[33px]">
             <Image
               src="/assets/icons/lightmodebtn.png"
               alt="cv-icon"
