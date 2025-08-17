@@ -42,7 +42,11 @@ export default function TechStack() {
                 {group.items.map((tech, index) => (
                   <button
                     key={index}
-                    className={`${selectedStack.includes(tech.name) ? "border-green-700" : "border-neutral-700"} cursor-pointer inline-flex items-center justify-center gap-1 px-3 py-2 bg-[#52525226] rounded-[5px] border border-solid  hover:bg-green-700`}
+                    className={`${
+                      selectedStack.includes(tech.name)
+                        ? "border-green-700 shadow-sm shadow-green-400"
+                        : "border-neutral-700"
+                    } cursor-pointer inline-flex items-center justify-center gap-2 px-3 py-2 bg-[#52525226] rounded-[5px] border border-solid  hover:bg-green-700`}
                     onClick={() =>
                       setSelectedStack((prev) =>
                         prev.includes(tech.name)
@@ -53,7 +57,12 @@ export default function TechStack() {
                   >
                     {tech.icon && (
                       <span className="block relative w-7 h-7">
-                        <Image src={tech.icon} alt={tech.name} fill />
+                        <Image
+                          className={`${tech.name !== "Next.JS" && "drop-shadow-[2px_2px_0_black]"}`}
+                          src={tech.icon}
+                          alt={tech.name}
+                          fill
+                        />
                       </span>
                     )}
                     <div className="relative w-fit font-medium text-[#e2e2e2] text-lg tracking-[0] leading-[normal]">

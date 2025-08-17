@@ -34,17 +34,17 @@ export const techStackData: StackButton[] = [
     },
     {
         name: "PHP",
-        icon: "",
+        icon: "/assets/icons/php-icon.png",
         group: "secondary"
     },
     {
         name: "Vanilla JS",
-        icon: "",
+        icon: "/assets/icons/js-icon.png",
         group: "secondary",
     },
     {
         name: "jQuery",
-        icon: "",
+        icon: "/assets/icons/jquery-icon.png",
         group: "secondary",
     },
     // {
@@ -54,7 +54,7 @@ export const techStackData: StackButton[] = [
     // },
     {
         name: "Tailwind",
-        icon: "",
+        icon: "/assets/icons/tailwind-icon.png",
         group: "secondary"
     },
     // {
@@ -64,32 +64,32 @@ export const techStackData: StackButton[] = [
     // },
     {
         name: "Java",
-        icon: "",
+        icon: "/assets/icons/java-icon.png",
         group: "tertiary",
     },
     {
         name: "C++",
-        icon: "",
+        icon: "/assets/icons/cpp-icon.png",
         group: "tertiary",
     },
     {
         name: "Python",
-        icon: "",
+        icon: "/assets/icons/python-icon.png",
         group: "tertiary",
     },
     {
         name: "MySQL",
-        icon: "",
+        icon: "/assets/icons/mysql-icon.png",
         group: "others"
     },
     {
         name: "MongoDB",
-        icon: "",
+        icon: "/assets/icons/mongo-icon.png",
         group: "others"
     },
     {
         name: "Figma",
-        icon: "",
+        icon: "/assets/icons/figma-icon.png",
         group: "tools"
     }
 ];
