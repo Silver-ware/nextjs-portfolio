@@ -1,7 +1,7 @@
 "use client";
 import { techStackData, groupStack } from "@/data/techstackbtn";
 // import { Badge } from "@/components/ui/badge";
-import { Layers2, RectangleEllipsis, OctagonMinus } from "lucide-react";
+import { Layers, RectangleEllipsis, OctagonMinus } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ export default function TechStack() {
   return (
     <section className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full">
       <div className="inline-flex items-center gap-2.5">
-        <Layers2 className="w-6 h-6 stroke-current text-[#16A34A]" />
+        <Layers className="w-6 h-6 stroke-current text-[#16A34A]" />
         <h2 className="relative w-fit font-semibold text-[#e2e2e2] text-[28px] tracking-[0] leading-[normal]">
           Tech Stack
         </h2>
