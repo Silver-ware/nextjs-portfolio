@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center gap-2.5 pt-[40px] pb-5 px-[120px] w-full">
+    <section className="flex items-center justify-center gap-2.5 pt-[40px] pb-3 px-[110px] w-full">
       <div className="flex flex-col basis-[765px] flex-1 h-[385px] items-start justify-center">
         <div className="inline-flex items-center">
           <h1 className="relative w-fit font-normal text-[#e2e2e2] text-4xl tracking-[0] leading-[30px] whitespace-nowrap">

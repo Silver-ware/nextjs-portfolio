@@ -8,7 +8,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 
-const navigationItems = [
+interface NavigationItem {
+  name: string, 
+  active: boolean,
+}
+
+const navigationItems: NavigationItem[] = [
   { name: "Home", active: true },
   { name: "Projects", active: false },
   { name: "Experience", active: false },

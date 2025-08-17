@@ -29,28 +29,7 @@ import {
 import { useState } from "react";
 // import Image from "next/image";
 
-const techStackData = [
-    {
-        name: "Django",
-        icon: "",
-    },
-    {
-        name: "Vue",
-        icon: "",
-    },
-    {
-        name: "React",
-        icon: "",
-    },
-    {
-        name: "Next.JS",
-        icon: "",
-    },
-    {
-        name: "TypeScript",
-        icon: "",
-    },
-];
+
 
 const projectsData = [
     {
@@ -142,105 +121,12 @@ export default function LandingPage() {
             
 
             {/* Hero Section */}
-            <section className="flex items-center justify-center gap-2.5 pt-[130px] pb-5 px-[120px] w-full">
-                <div className="flex flex-col w-[765px] h-[385px] items-start justify-center">
-                    <div className="inline-flex items-center">
-                        <h1 className="relative w-fit mt-[-1.00px] [font-family:'Poppins-Regular',Helvetica] font-normal text-[#e2e2e2] text-4xl tracking-[0] leading-[30px] whitespace-nowrap">
-                            <span className="[font-family:'Poppins-Regular',Helvetica] font-normal text-[#e2e2e2] text-4xl tracking-[0] leading-[30px]">
-                                {"Hi, I'm"}
-                            </span>
-                            <span className="[font-family:'Poppins-ExtraBold',Helvetica] font-extrabold">
-                                Garry Caber
-                            </span>
-                            <span className="[font-family:'Poppins-Regular',Helvetica] font-normal text-[#e2e2e2] text-4xl tracking-[0] leading-[30px]">
-                                {" "}
-                                & work like an{" "}
-                            </span>
-                            <span className="[font-family:'Poppins-ExtraBold',Helvetica] font-extrabold">
-                                ant
-                            </span>
-                            <span className="[font-family:'Poppins-Regular',Helvetica] font-normal text-[#e2e2e2] text-4xl tracking-[0] leading-[30px]">
-                                .
-                            </span>
-                        </h1>
-                    </div>
-
-                    <div className="inline-flex items-center gap-2.5">
-                        <h2 className="relative w-fit mt-[-1.00px] [font-family:'Poppins-ExtraBold',Helvetica] font-extrabold text-[#e2e2e2] text-5xl tracking-[0] leading-[normal]">
-                            Full Stack Developer
-                        </h2>
-                    </div>
-
-                    <div className="flex items-center gap-2.5 w-full">
-                        <p className="relative flex-1 mt-[-1.00px] [font-family:'Poppins-LightItalic',Helvetica] font-light italic text-[#e2e2e2] text-xl tracking-[0] leading-[normal]">
-                            Turning ideas into clean, efficient code—specializing in
-                            full-stack web development.
-                        </p>
-                    </div>
-
-                    <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
-                        <Button className="inline-flex items-center justify-center px-3 py-2.5 bg-green-700 rounded-[5px] border border-solid">
-                            <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal]">
-                                View Projects
-                            </div>
-                        </Button>
-
-                        <Button
-                            variant="outline"
-                            className="inline-flex items-center justify-center px-3 py-2.5 rounded-[5px] border border-solid border-neutral-700"
-                        >
-                            <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins-Regular',Helvetica] font-normal text-[#e2e2e2] text-base tracking-[0] leading-[normal]">
-                                Contact Me
-                            </div>
-                        </Button>
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center justify-center gap-2.5 pl-10 pr-0 py-10 flex-1 self-stretch grow">
-                    <div className="relative w-[350px] h-[350px] rounded-[175px] overflow-hidden">
-                        {/* <img className="w-full h-full object-cover" alt="Profile" src="" /> */}
-                    </div>
-                </div>
-            </section>
+           
 
             {/* Main Content */}
             <main className="flex flex-col items-start gap-6 pt-0 pb-60 px-[120px] w-full">
                 {/* Tech Stack Section */}
-                <section className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full">
-                    <div className="inline-flex items-center gap-2.5">
-                        <Layers className="w-6 h-6 text-[#e2e2e2]" />
-                        <h2 className="relative w-fit mt-[-1.00px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-[#e2e2e2] text-[28px] tracking-[0] leading-[normal]">
-                            Tech Stack
-                        </h2>
-                    </div>
-
-                    <div className="flex flex-wrap items-start gap-[12px_12px] px-0 py-2.5 w-full">
-                        {techStackData.map((tech, index) => (
-                            <Badge
-                                key={index}
-                                className="inline-flex items-center justify-center gap-1 px-3 py-2 bg-[#52525226] rounded-[5px] border border-solid border-neutral-700"
-                            >
-                                {/* <img
-                                    className="relative w-[30px] h-[30px] aspect-[1] object-cover"
-                                    alt={tech.name}
-                                    src={tech.icon}
-                                /> */}
-                                <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-[#e2e2e2] text-xl tracking-[0] leading-[normal]">
-                                    {tech.name}
-                                </div>
-                            </Badge>
-                        ))}
-                        <div className="inline-flex items-start">
-                            <div className="inline-flex items-center justify-center gap-1 px-3 py-2 bg-[#52525226] rounded-[5px] border border-solid border-neutral-700">
-                                {/* <img
-                                    className="relative w-[30px] h-[30px] aspect-[1] object-cover"
-                                    alt="Additional tech"
-                                    src=""
-                                /> */}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
 
                 {/* Projects Section */}
                 <section className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full">
