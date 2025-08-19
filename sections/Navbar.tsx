@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import { CopyEmail } from "@/components/EmailCopyable";
 
 interface NavigationItem {
   name: string, 
@@ -29,9 +30,7 @@ export default function Navbar() {
   return (
     <header className="flex w-full h-fit items-center md:justify-between gap-2.5 lg:px-[25px] md:px-3 pl-[25px] pr-3 lg:py-2.5 md:py-1.5 py-2.5 bg-[#1a1a1a] border-b border-solid border-neutral-700 sticky top-0 z-50 overflow-x-auto">
       <div className="inline-flex md:w-fit w-full items-center justify-center lg:pl-5 lg:pr-2.5 md:pl-3 md:pr-1 pl-5 pr-2.5 py-2.5">
-        <span className="relative w-fit font-quantico font-bold text-[#e2e2e2] lg:text-xl text-base tracking-[0] leading-[normal]">
-          garryworkwithit@gmail.com
-        </span>
+        <CopyEmail email={"garryworkwithit@gmail.com"}/>
       </div>
 
       <div className="inline-flex items-center justify-end lg:pl-2.5 md:pl-1 pr-0 py-2.5 self-stretch">
