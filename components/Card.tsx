@@ -1,0 +1,47 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { ProjectInterface } from "@/data/projects";
+import Image from "next/image";
+
+export default function Cards({project}: {project: ProjectInterface}) {
+  return (
+    <Card
+      className="flex flex-col w-[300px] items-center justify-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700"
+    >
+      <CardContent className="p-0 w-full">
+        <div className="self-stretch relative h-36 rounded overflow-hidden">
+          <Image
+            src={project.image}
+            alt={`${project.title}-image`}
+            fill
+          />
+        </div>
+        <div className="flex flex-col items-start gap-1 mt-3.5 w-full">
+          <div className="inline-flex items-start gap-2.5">
+            <h3 className="relative w-fit font-medium text-[#e2e2e2] text-xl tracking-[0] leading-[normal]">
+              {project.title}
+            </h3>
+          </div>
+
+          <div className="flex w-full items-start gap-2.5">
+            <p className="relative flex-1 font-light text-neutral-400 text-sm tracking-[0] leading-[normal]">
+              {project.description}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-start gap-[4px_4px] px-0 py-1 w-full">
+            {project.technologies.map((tech, techIndex) => (
+              <div
+                key={techIndex}
+                className="inline-flex items-center justify-center gap-2.5 px-3 py-1 bg-[#a3a3a31a] rounded-[5px]"
+              >
+                <div className="relative w-fit font-normal text-[#e2e2e2] text-sm tracking-[0] leading-[normal]">
+                  {tech}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
