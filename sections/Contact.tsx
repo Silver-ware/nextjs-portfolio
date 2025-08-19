@@ -1,7 +1,7 @@
 "use client";
-
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import {
   ContactRound,
   Send,
@@ -28,7 +28,31 @@ const socialLinksData = [
 export default function Contact() {
   return (
     <footer className="flex flex-col items-start gap-2.5 pt-6 pb-[50px] px-40 w-full bg-[#52525226] relative">
-      <div className="inline-flex flex-col items-center justify-center absolute top-[-81px] left-[50%] -translate-x-[50%]">
+      <div className="absolute w-full h-[120px] top-[-120px] left-[50%] -translate-x-[50%] scale-y-[-1]">
+        <Image
+          src="/assets/svg/waves-opacity.svg"
+          alt="transparent-svg-1"
+          fill
+        />
+        <Image
+          src="/assets/svg/waves-opacity.svg"
+          alt="transparent-sv-2"
+          fill
+        />
+      </div>
+      <div className="absolute w-full h-[120px] top-0 left-[50%] -translate-x-[50%]">
+        <Image
+          src="/assets/svg/waves.svg"
+          alt="transparent-svg-1"
+          fill
+        />
+        <Image
+          src="/assets/svg/waves-opacity.svg"
+          alt="transparent-sv-2"
+          fill
+        />
+      </div>
+      <div className="inline-flex w-full flex-col items-center justify-center absolute top-[-81px] left-[50%] -translate-x-[50%]">
         <h2 className="relative w-fit font-semibold text-[#e2e2e2] text-[32px] tracking-[0] leading-[30px] whitespace-nowrap">
           Reach Out Today
         </h2>
@@ -50,7 +74,7 @@ export default function Contact() {
         <div className="flex flex-col items-start gap-3 pl-0 pr-5 py-0 flex-1 grow">
           <Input
             placeholder="Name"
-            className="items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 text-base font-semibold"
+            className="relative z-50 items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 text-base font-semibold"
           />
 
           <Input
@@ -58,10 +82,9 @@ export default function Contact() {
             className="items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 text-base font-semibold"
           />
 
-          <Textarea
+          <textarea
             placeholder="Message"
-            className="flex items-start gap-2.5 
-    pt-2.5 pb-40 px-5 w-full bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 text-base font-semibold"
+            className="flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 text-base font-semibold"
           />
 
           <div className="flex items-center justify-end gap-2.5 w-full rounded">
@@ -90,6 +113,14 @@ export default function Contact() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="absolute w-full h-[120px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
+        <Image
+          src="/assets/svg/waves-opacity.svg"
+          alt="transparent-sv-2"
+          fill
+        />
       </div>
     </footer>
   );
