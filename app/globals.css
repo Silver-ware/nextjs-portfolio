@@ -31,6 +31,23 @@ input[type=number] {
 }
 
 
+/* Base bullets */
+.swiper-pagination-bullet {
+  background-color: #999;
+  opacity: 1;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background-color: #16A34A !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #16A34A !important;
+  --swiper-navigation-size: 18px;
+}
+
+
 /* 
 @custom-variant dark (&:is(.dark *));
 

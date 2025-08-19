@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ProjectInterface } from "@/data/projects";
 import Image from "next/image";
 
-export default function Cards({project}: {project: ProjectInterface}) {
+export default function ProjCards({project}: {project: ProjectInterface}) {
   return (
     <Card
       className="flex flex-col w-[300px] items-center justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700"
