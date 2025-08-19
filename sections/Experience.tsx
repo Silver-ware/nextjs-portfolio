@@ -49,7 +49,7 @@ export default function Experience() {
             >
               {awardsAndCertificatesData.map((awards) => (
                 <SwiperSlide key={awards.id}>
-                  <div className="bg-[#52525226] flex flex-col md:flex-row gap-2 rounded-xl pt-5 pb-9 px-8 md:px-10 lg:px-12">
+                  <div className="bg-[#52525226] flex flex-col md:flex-row gap-2 lg:gap-10 md:gap-8 rounded-xl pt-5 pb-9 px-8 md:px-10 lg:px-12">
                     <div className="relative rounded w-full md:w-[40%] lg:w-1/2 overflow-hidden aspect-3/2">
                       <Image
                         className="object-cover"
