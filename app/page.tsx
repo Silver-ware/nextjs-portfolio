@@ -8,7 +8,7 @@ export default function Landing() {
   return (
     <>
       <Hero/>
-      <main className="flex flex-col items-start gap-6 pt-0 pb-60 px-[110px] w-full">
+      <main className="flex flex-col items-start gap-6 pt-0 md:pb-60 pb-[220] lg:px-[110px] md:px-[60px] px-[28px] w-full">
         <TechStack/>
         <Projects/>
         <Experience/>
