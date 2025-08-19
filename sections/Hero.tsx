@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
 
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
-          <button className="inline-flex items-center justify-center px-3 py-2.5 bg-green-700 rounded-[5px] border border-green-700 border-solid">
+          <button className="cursor-pointer inline-flex items-center justify-center px-3 py-2.5 bg-green-700 rounded-[5px] border border-green-700 border-solid">
             <span className="relative w-fit h-fit font-normal text-white text-base tracking-[0] leading-[normal]">
               View Projects
             </span>
