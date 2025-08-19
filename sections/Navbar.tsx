@@ -53,14 +53,17 @@ export default function Navbar() {
         </NavigationMenu>
 
         <div className="inline-flex items-center justify-center lg:gap-7 gap-3 pl-0 pr-2 py-0">
-          <div className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0">
+          <a
+            href="/assets/files/resume.pdf" 
+            download={"garry-caber-resume.pdf"}
+            className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0">
             <Image
               src="/assets/icons/darkmodecv.png"
               alt="cv-icon"
               sizes="(max-width: 35px) 100vw"
               fill
             />
-          </div>
+          </a>
           <div className="relative lg:w-[32px] md:w-7 w-6 lg:h-[33px] md:h-[27px] h-6">
             <Image
               src="/assets/icons/lightmodebtn.png"
