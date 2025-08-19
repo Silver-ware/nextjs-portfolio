@@ -18,6 +18,35 @@ body {
   font-family: var(--font-quantico);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Base bullets */
+.swiper-pagination-bullet {
+  background-color: #999;
+  opacity: 1;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background-color: #16A34A !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #16A34A !important;
+  --swiper-navigation-size: 18px;
+}
+
 
 /* 
 @custom-variant dark (&:is(.dark *));

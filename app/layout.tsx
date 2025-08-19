@@ -21,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${quantico.variable}`}>
-      <body className={`bg-[#1a1a1a] antialiased`} cz-shortcut-listen="false">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Garry Portfolio</title>
+      </head>
+      <body className={`bg-[#1a1a1a] overflow-x-hidden antialiased`} cz-shortcut-listen="false">
         <Navbar/>
         {children}
       </body>
