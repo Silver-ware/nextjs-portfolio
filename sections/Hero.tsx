@@ -36,13 +36,13 @@ export default function Hero() {
         </div>
 
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
-          <button className="cursor-pointer inline-flex items-center justify-center px-3 py-2.5 bg-green-700 rounded-[5px] border border-green-700 border-solid">
+          <button className="cursor-pointer inline-flex items-center justify-center px-3 py-2.5 bg-green-700 hover:bg-[#085D28] transition-all ease-in-out duration-500 rounded-[5px] border border-green-700 border-solid">
             <span className="relative w-fit h-fit font-normal text-white text-base tracking-[0] leading-[normal]">
               View Projects
             </span>
           </button>
 
-          <button className="inline-flex items-center justify-center px-3 py-2.5 rounded-[5px] border border-solid border-neutral-700">
+          <button className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-[#52525226]  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-neutral-700">
             <span className="relative w-fit font-normal text-[#e2e2e2] text-base tracking-[0] leading-[normal]">
               Contact Me
             </span>

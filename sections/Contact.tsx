@@ -113,7 +113,7 @@ export default function Contact() {
           <div className="flex items-center justify-end gap-2.5 w-full rounded">
             <button
               type="submit"
-              className="relative z-50 inline-flex items-center justify-center gap-2.5 px-4 py-1.5 bg-green-600 rounded-[5px] border border-solid border-green-700 outline-0"
+              className="relative z-50 inline-flex items-center justify-center gap-2.5 px-4 py-1.5 bg-green-600 hover:bg-[#085D28] hover:scale-105 transition-all ease-in-out duration-500  rounded-[5px] border border-solid border-green-700 outline-0"
             >
               <Send className="w-5 h-5 text-[#e2e2e2]" />
               <div className="text-[#e2e2e2] text-lg relative w-fit mt-[-1.00px] font-semibold tracking-[0] leading-[normal]">
