@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Cards({project}: {project: ProjectInterface}) {
   return (
     <Card
-      className="flex flex-col w-[300px] items-center justify-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700"
+      className="flex flex-col w-[300px] items-center justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700"
     >
       <CardContent className="p-0 w-full">
         <div className="self-stretch relative h-36 rounded overflow-hidden">
@@ -17,7 +17,7 @@ export default function Cards({project}: {project: ProjectInterface}) {
         </div>
         <div className="flex flex-col items-start gap-1 mt-3.5 w-full">
           <div className="inline-flex items-start gap-2.5">
-            <h3 className="relative w-fit font-medium text-[#e2e2e2] text-xl tracking-[0] leading-[normal]">
+            <h3 className="relative w-fit font-medium text-[#e2e2e2] md:text-xl text-[18px] tracking-[0] leading-[normal]">
               {project.title}
             </h3>
           </div>
@@ -34,7 +34,7 @@ export default function Cards({project}: {project: ProjectInterface}) {
                 key={techIndex}
                 className="inline-flex items-center justify-center gap-2.5 px-3 py-1 bg-[#a3a3a31a] rounded-[5px]"
               >
-                <div className="relative w-fit font-normal text-[#e2e2e2] text-sm tracking-[0] leading-[normal]">
+                <div className="relative w-fit font-normal text-[#e2e2e2] md:text-sm text-xs tracking-[0] leading-[normal]">
                   {tech}
                 </div>
               </div>
