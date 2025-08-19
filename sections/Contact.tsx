@@ -28,7 +28,7 @@ export default function Contact() {
   const [formData, setFormData] = useState<FormDataTypes>({name: "", email: "", message: ""})
 
   return (
-    <footer className="flex flex-col items-start gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative">
+    <footer id="contact" className="flex flex-col items-start gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative">
       <div className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
           src="/assets/svg/waves-opacity.svg"

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-3 lg:px-[110px] md:px-[60px] px-6 w-full h-fit">
+    <section id="home" className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-3 lg:px-[110px] md:px-[60px] px-6 w-full h-fit scroll-mt-[100px] ">
       <div className="flex flex-col flex-1 h-fit md:items-start items-center justify-center">
         <div className="inline-flex items-center">
           <p className="relative w-fit font-normal text-[#e2e2e2] tracking-[0] md:leading-[36px] text-wrap">
@@ -35,14 +35,16 @@ export default function Hero() {
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
           <button className="cursor-pointer inline-flex items-center justify-center px-3 py-2.5 bg-green-700 hover:bg-[#085D28] transition-all ease-in-out duration-500 rounded-[5px] border border-green-700 border-solid">
             <span className="relative w-fit h-fit font-normal text-white lg:text-base text-[14px] tracking-[0] leading-[normal]">
-              View Projects
+              View Skill Set
             </span>
           </button>
 
           <button className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-[#52525226]  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-neutral-700">
-            <span className="relative w-fit font-normal text-[#e2e2e2] lg:text-base text-[14px] tracking-[0] leading-[normal]">
+            <a 
+              href="#contact"
+              className="relative w-fit font-normal text-[#e2e2e2] lg:text-base text-[14px] tracking-[0] leading-[normal]">
               Contact Me
-            </span>
+            </a>
           </button>
         </div>
       </div>

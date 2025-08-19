@@ -11,7 +11,7 @@ import ProjCards from "@/components/ProjectCard";
 
 export default function Projects() {
   return (
-    <section className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full">
+    <section id="projects" className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full scroll-mt-[100px]">
       <div className="inline-flex items-center gap-2.5">
         <FolderKanban className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
         <h2 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
