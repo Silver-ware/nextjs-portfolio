@@ -158,12 +158,12 @@ export default function Contact() {
           </div>
         </form>
 
-        <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
+        <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] md:items-start items-center gap-3 lg:pl-10 lg:pr-5 md:pt-0 pt-8">
           <h3 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
-            Socials:
+            Socials
           </h3>
 
-          <div className="w-full self-stretch flex-1 flex md:flex-col flex-row gap-6">
+          <div className="w-full self-stretch flex-1 flex flex-col lg:gap-6 md:gap-10 gap-14">
             <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
               {socialLinksData.map((social, index) => (
                 <TooltipProvider key={social.alt}>
@@ -197,8 +197,8 @@ export default function Contact() {
                 </TooltipProvider>
               ))}
             </div>
-            <div className="self-stretch flex flex-col gap-4 justify-center items-center text-neutral-400 flex-1">
-              <span className="text-lg opacity-40">Develope with:</span>
+            <div className="self-stretch basis-1/2 flex flex-col gap-4 justify-center items-center text-neutral-400 flex-1">
+              <span className="md:text-lg text-base opacity-40">Develop with:</span>
               <div className="w-full flex items-center justify-center gap-6">
                 {techIcons.map((icons, index) => (
                   <TooltipProvider key={index}>
@@ -207,8 +207,8 @@ export default function Contact() {
                         <div
                           className={`${
                             icons.name === "NextJS"
-                              ? "w-15 h-15"
-                              : "w-10 h-10 "
+                              ? "lg:w-15 lg:h-15 w-12 h-12"
+                              : "lg:w-10 lg:h-10 w-8 h-8"
                           } relative z-20 opacity-30 hover:opacity-80 hover:scale-105 transition-all`}
                         >
                           <Image src={icons.source} alt={icons.name} fill />
@@ -216,7 +216,7 @@ export default function Contact() {
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>
                         <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
-                          <span>{icons.name}</span>
+                          <span className="lg:text-base text-sm">{icons.name}</span>
                         </div>
                       </TooltipContent>
                     </Tooltip>
