@@ -1,20 +1,29 @@
 "use client";
 import Image from "next/image";
-import { ContactRound, Send, Facebook, Linkedin, Github } from "lucide-react";
+import { ContactRound, Send } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { useState } from "react";
 
 const socialLinksData = [
   {
-    icon: Facebook,
-    url: "www.facebook/exampleaccount.21",
+    icon: "/assets/icons/facebook-icon.png",
+    alt: "Facebook",
+    url: "www.facebook/garrypedrosa.9",
   },
   {
-    icon: Linkedin,
-    url: "www.linkedin/sampleagain214",
+    icon: "/assets/icons/linkedin-icon.png",
+    alt: "Linkedin",
+    url: "www.linkedin.com/in/garry-caber-066283374/",
   },
   {
-    icon: Github,
-    url: "github.com/repo/samplerepo21",
+    icon: "/assets/icons/github-icon.png",
+    alt: "Github",
+    url: "https://github.com/Silver-ware",
   },
 ];
 
@@ -25,11 +34,18 @@ interface FormDataTypes {
 }
 
 export default function Contact() {
-  const [formData, setFormData] = useState<FormDataTypes>({name: "", email: "", message: ""})
+  const [formData, setFormData] = useState<FormDataTypes>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   return (
-    <footer id="contact" className="flex flex-col items-start gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative">
-      <div className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
+    <footer
+      id="contact"
+      className="flex flex-col items-start gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative"
+    >
+      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-svg-1"
@@ -41,7 +57,7 @@ export default function Contact() {
           fill
         />
       </div>
-      <div className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] top-0 left-[50%] -translate-x-[50%]">
+      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] top-0 left-[50%] -translate-x-[50%]">
         <Image src="/assets/svg/waves.svg" alt="transparent-svg-1" fill />
         <Image
           src="/assets/svg/waves-opacity.svg"
@@ -61,7 +77,7 @@ export default function Contact() {
       </div>
 
       <div className="inline-flex items-center gap-2.5">
-        <ContactRound className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]"  />
+        <ContactRound className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
         <h2 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
           Contact
         </h2>
@@ -70,7 +86,7 @@ export default function Contact() {
       <div className="flex md:flex-row flex-col items-start gap-2.5 px-0 pb-1 lg:pt-6 pt-2 w-full">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex flex-col items-start lg:gap-6 gap-2 pl-0 md:pr-5 py-0 lg:flex-1 w-full"
+          className="flex flex-col items-start lg:gap-3 gap-2 pl-0 md:pr-5 py-0 lg:flex-1 w-full"
         >
           <label htmlFor="name" className="w-full relative z-50">
             <input
@@ -78,11 +94,17 @@ export default function Contact() {
               placeholder="Name"
               id="name"
               required
-              onChange={(e) => setFormData(prev => ({...prev, name: e.target.value}))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, name: e.target.value }))
+              }
               className="peer w-full items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2] focus:placeholder-transparent"
             />
             <span
-            className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${!!formData.name ? "-top-[18px] opacity-100" : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]" } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
+              className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+                !!formData.name
+                  ? "-top-[18px] opacity-100"
+                  : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
+              } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
             >
               Name
             </span>
@@ -94,11 +116,17 @@ export default function Contact() {
               id="email"
               placeholder="Email"
               required
-              onChange={(e) => setFormData(prev => ({...prev, email: e.target.value}))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, email: e.target.value }))
+              }
               className="peer w-full items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2] focus:placeholder-transparent"
             />
-             <span
-            className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${!!formData.email ? "-top-[18px] opacity-100" : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]" } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
+            <span
+              className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+                !!formData.email
+                  ? "-top-[18px] opacity-100"
+                  : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
+              } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
             >
               Emaill
             </span>
@@ -123,25 +151,44 @@ export default function Contact() {
           </div>
         </form>
 
-        <div className="flex flex-col items-start gap-3 lg:pl-10 lg:pr-5 py-0">
+        <div className="flex flex-col lg:min-w-[45%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
           <h3 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
-            Socials
+            Socials:
           </h3>
 
-          <div className="inline-flex flex-col items-start gap-3 pl-5 pr-0 py-0">
+          <div className="inline-flex flex-row items-start justify-center gap-8 w-full lg:pt-6 pb-0">
             {socialLinksData.map((social, index) => (
-              <div key={index} className="inline-flex items-center gap-3">
-                <social.icon className="lg:w-[35px] md:w-7 w-6 lg:h-[35px] md:h-7 h-6 text-[#e2e2e2]" />
-                <div className="relative w-fit font-semibold text-[#e2e2e2] lg:text-base text-sm tracking-[0] leading-[normal]">
-                  {social.url}
-                </div>
-              </div>
+              <TooltipProvider key={social.alt}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      key={index}
+                      className="group inline-flex items-center gap-3 hover:scale-110 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer rounded-full"
+                    >
+                      <div className="lg:w-[50px] md:w-7 w-6 lg:h-[50px] md:h-7 h-6 text-[#e2e2e2] relative">
+                        <Image
+                          className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
+                          src={social.icon}
+                          alt={social.alt}
+                          fill
+                        />
+                      </div>
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent sideOffset={5}>
+                    <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
+                      <span className="text-sm">Discover me on</span>
+                      <span className="block text-base font-medium text-green-500">{social.alt}</span>                      
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
+      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-sv-2"

@@ -1,5 +1,6 @@
 // import { Button } from "./ui/button";
 import Image from "next/image";
+import { Computer } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -33,7 +34,8 @@ export default function Hero() {
         </div>
 
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
-          <button className="cursor-pointer inline-flex items-center justify-center px-3 py-2.5 bg-green-700 hover:bg-[#085D28] transition-all ease-in-out duration-500 rounded-[5px] border border-green-700 border-solid">
+          <button className="cursor-pointer gap-1 inline-flex items-center justify-center px-3 py-2.5 bg-green-700 hover:bg-[#085D28] transition-all ease-in-out duration-500 rounded-[5px] border border-green-700 border-solid">
+            <Computer className="lg:w-5 lg:h-5 w-4 h-4 text-white"/>
             <span className="relative w-fit h-fit font-normal text-white lg:text-base text-[14px] tracking-[0] leading-[normal]">
               View Skill Set
             </span>

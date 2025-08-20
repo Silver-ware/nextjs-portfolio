@@ -44,26 +44,34 @@ function TooltipContent({
   return (
     <TooltipPrimitive.Portal>
       <TooltipPrimitive.Content
-        data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
+          "group relative bg-primary text-primary-foreground z-50 w-fit rounded-md px-3 py-1.5 text-xs",
+          "animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+          "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
           className
         )}
         {...props}
       >
         {children}
 
-        <ChevronUp className="w-5 h-5 absolute -top-1 left-1/2 -translate-x-1/2 text-[#e5e5e5]"/>
-        {/* <span
-          className="absolute -top-1 left-1/2 scale-y-[-1] -translate-x-1/2 w-0 h-0 
-            border-l-6 border-l-transparent 
-            border-r-6 border-r-transparent 
-            border-t-6 border-t-[#52525226]"
-        /> */}
+        <ChevronUp
+          aria-hidden
+          className={cn(
+            "absolute w-5 h-5 pointer-events-none text-[#e5e5e5] transition-transform",
+            // bottom → top edge, pointing up (default)
+            "group-data-[side=bottom]:-top-1.5 group-data-[side=bottom]:left-1/2 group-data-[side=bottom]:-translate-x-1/2",
+            // top → bottom edge, rotate to point down
+            "group-data-[side=top]:-bottom-1.5 group-data-[side=top]:left-1/2 group-data-[side=top]:-translate-x-1/2 group-data-[side=top]:rotate-180",
+            // right → left edge, rotate to point right
+            "group-data-[side=right]:-left-1.5 group-data-[side=right]:top-1/2 group-data-[side=right]:-translate-y-1/2 group-data-[side=right]:-rotate-90",
+            // left → right edge, rotate to point left
+            "group-data-[side=left]:-right-1.5 group-data-[side=left]:top-1/2 group-data-[side=left]:-translate-y-1/2 group-data-[side=left]:rotate-90"
+          )}
+        />
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
-  );
+  )
 }
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
