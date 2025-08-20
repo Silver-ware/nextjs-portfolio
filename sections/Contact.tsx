@@ -198,7 +198,9 @@ export default function Contact() {
               ))}
             </div>
             <div className="self-stretch basis-1/2 flex flex-col gap-4 justify-center items-center text-neutral-400 flex-1">
-              <span className="md:text-lg text-base opacity-40">Develop with:</span>
+              <span className="md:text-lg text-base opacity-40">
+                Develop with:
+              </span>
               <div className="w-full flex items-center justify-center gap-6">
                 {techIcons.map((icons, index) => (
                   <TooltipProvider key={index}>
@@ -215,8 +217,22 @@ export default function Contact() {
                         </div>
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>
-                        <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
-                          <span className="lg:text-base text-sm">{icons.name}</span>
+                        <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-center mb-1 transition-all duration-200 ease-in-out">
+                          <span
+                            className={`lg:text-base text-sm ${
+                              icons.name === "Figma"
+                                ? "text-[#F24E1E]"
+                                : icons.name === "NextJS"
+                                ? "text-[#000000]"
+                                : icons.name === "TypeScript"
+                                ? "text-[#3178C6]"
+                                : icons.name === "TailwindCSS"
+                                ? "text-[#06B6D4]"
+                                : "text-[#e2e2e2]"
+                            }`}
+                          >
+                            {icons.name}
+                          </span>
                         </div>
                       </TooltipContent>
                     </Tooltip>

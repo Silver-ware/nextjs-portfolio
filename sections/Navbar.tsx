@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -75,26 +81,55 @@ export default function Navbar() {
         </NavigationMenu>
 
         <div className="inline-flex items-center justify-center lg:gap-7 gap-3 pl-0 pr-2 py-0">
-          <a
-            href="/assets/files/resume.pdf"
-            download={"garry-caber-resume.pdf"}
-            className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0"
-          >
-            <Image
-              src="/assets/icons/darkmodecv.png"
-              alt="cv-icon"
-              sizes="(max-width: 35px) 100vw"
-              fill
-            />
-          </a>
-          <div className="relative lg:w-[32px] md:w-7 w-6 lg:h-[33px] md:h-[27px] h-6">
-            <Image
-              src="/assets/icons/lightmodebtn.png"
-              alt="cv-icon"
-              sizes="(max-width: 35px) 100vw"
-              fill
-            />
-          </div>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="/assets/files/resume.pdf"
+                  download={"garry-caber-resume.pdf"}
+                  className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0"
+                >
+                  <Image
+                    src="/assets/icons/darkmodecv.png"
+                    alt="cv-icon"
+                    sizes="(max-width: 35px) 100vw"
+                    fill
+                  />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" sideOffset={10}>
+                <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mt-1 transition-all duration-200    ease-in-out">
+                  <span className="lg:text-sm text-xs">
+                    Download
+                    <br />
+                    CV/Résumé
+                  </span>
+                </div>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  className="cursor-pointer relative lg:w-[32px] md:w-7 w-6 lg:h-[33px] md:h-[27px] h-6"
+                >
+                  <Image
+                    src="/assets/icons/lightmodebtn.png"
+                    alt="cv-icon"
+                    sizes="(max-width: 35px) 100vw"
+                    fill
+                  />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent side="left" sideOffset={10}>
+                <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1.5 text-[#e2e2e2] text-center mt-1 transition-all duration-200    ease-in-out">
+                  <span className="lg:text-sm text-xs">Switch to Light Mode</span>
+                </div>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </div>
     </header>
