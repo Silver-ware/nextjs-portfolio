@@ -13,18 +13,25 @@ const socialLinksData = [
   {
     icon: "/assets/icons/facebook-icon.png",
     alt: "Facebook",
-    url: "www.facebook/garrypedrosa.9",
+    url: "https://www.facebook.com/garrypedrosa.9",
   },
   {
     icon: "/assets/icons/linkedin-icon.png",
     alt: "Linkedin",
-    url: "www.linkedin.com/in/garry-caber-066283374/",
+    url: "https://www.linkedin.com/in/garry-caber-066283374/",
   },
   {
     icon: "/assets/icons/github-icon.png",
     alt: "Github",
     url: "https://github.com/Silver-ware",
   },
+];
+
+const techIcons = [
+  { source: "/assets/icons/figma-icon.png", name: "Figma" },
+  { source: "/assets/icons/nextjs-icon.png", name: "NextJS" },
+  { source: "/assets/icons/ts-icon.png", name: "TypeScript" },
+  { source: "/assets/icons/tailwind-icon.png", name: "TailwindCSS" },
 ];
 
 interface FormDataTypes {
@@ -43,7 +50,7 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col items-start gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative"
+      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative"
     >
       <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
@@ -151,39 +158,72 @@ export default function Contact() {
           </div>
         </form>
 
-        <div className="flex flex-col lg:min-w-[45%] md:min-w-[35%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
+        <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
           <h3 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
             Socials:
           </h3>
 
-          <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
-            {socialLinksData.map((social, index) => (
-              <TooltipProvider key={social.alt}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      key={index}
-                      className="group inline-flex items-center gap-3 hover:scale-110 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer rounded-full"
-                    >
-                      <div className="lg:w-[50px] md:w-11 w-9 lg:h-[50px] md:h-11 h-9 text-[#e2e2e2] relative">
-                        <Image
-                          className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
-                          src={social.icon}
-                          alt={social.alt}
-                          fill
-                        />
+          <div className="w-full self-stretch flex-1 flex md:flex-col flex-row gap-6">
+            <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
+              {socialLinksData.map((social, index) => (
+                <TooltipProvider key={social.alt}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href={social.url}
+                        target="_blank"
+                        key={index}
+                        className="group inline-flex items-center gap-3 hover:scale-110 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer rounded-full"
+                      >
+                        <div className="lg:w-[50px] md:w-11 w-9 lg:h-[50px] md:h-11 h-9 text-[#e2e2e2] relative">
+                          <Image
+                            className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
+                            src={social.icon}
+                            alt={social.alt}
+                            fill
+                          />
+                        </div>
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent sideOffset={5}>
+                      <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
+                        <span className="text-sm">Discover me on</span>
+                        <span className="block text-base font-medium text-green-500">
+                          {social.alt}
+                        </span>
                       </div>
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent sideOffset={5}>
-                    <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
-                      <span className="text-sm">Discover me on</span>
-                      <span className="block text-base font-medium text-green-500">{social.alt}</span>                      
-                    </div>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            ))}
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
+            </div>
+            <div className="self-stretch flex flex-col gap-4 justify-center items-center text-neutral-400 flex-1">
+              <span className="text-lg opacity-40">Develope with:</span>
+              <div className="w-full flex items-center justify-center gap-6">
+                {techIcons.map((icons, index) => (
+                  <TooltipProvider key={index}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div
+                          className={`${
+                            icons.name === "NextJS"
+                              ? "w-15 h-15"
+                              : "w-10 h-10 "
+                          } relative z-20 opacity-30 hover:opacity-80 hover:scale-105 transition-all`}
+                        >
+                          <Image src={icons.source} alt={icons.name} fill />
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent sideOffset={5}>
+                        <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
+                          <span>{icons.name}</span>
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
