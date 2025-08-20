@@ -9,7 +9,7 @@ export function CopyEmail({ email }: { email: string }) {
       await navigator.clipboard.writeText(email)
       setOpen(true)
 
-      // setTimeout(() => setOpen(false), 1500)
+      setTimeout(() => setOpen(false), 1500)
     } catch (err) {
       console.error("Failed to copy:", err)
     }
@@ -27,7 +27,7 @@ export function CopyEmail({ email }: { email: string }) {
           </span>
         </TooltipTrigger>
         <TooltipContent align="center" side="bottom">
-          <div className="px-3 py-1 mt-2 font-quantico backdrop-blur-sm lg:text-base text-sm rounded text-[#e2e2e2] bg-[#52525226] border border-neutral-700">
+          <div className="px-3 py-1 mt-2 font-quantico backdrop-blur-xs lg:text-base text-sm rounded text-[#e2e2e2] bg-[#52525226] border border-neutral-700">
             Copied!
           </div>
         </TooltipContent>

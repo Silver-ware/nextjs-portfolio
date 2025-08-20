@@ -151,12 +151,12 @@ export default function Contact() {
           </div>
         </form>
 
-        <div className="flex flex-col lg:min-w-[45%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
+        <div className="flex flex-col lg:min-w-[45%] md:min-w-[35%] items-start gap-3 lg:pl-10 lg:pr-5 py-0">
           <h3 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
             Socials:
           </h3>
 
-          <div className="inline-flex flex-row items-start justify-center gap-8 w-full lg:pt-6 pb-0">
+          <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
             {socialLinksData.map((social, index) => (
               <TooltipProvider key={social.alt}>
                 <Tooltip>
@@ -165,7 +165,7 @@ export default function Contact() {
                       key={index}
                       className="group inline-flex items-center gap-3 hover:scale-110 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer rounded-full"
                     >
-                      <div className="lg:w-[50px] md:w-7 w-6 lg:h-[50px] md:h-7 h-6 text-[#e2e2e2] relative">
+                      <div className="lg:w-[50px] md:w-11 w-9 lg:h-[50px] md:h-11 h-9 text-[#e2e2e2] relative">
                         <Image
                           className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
                           src={social.icon}
