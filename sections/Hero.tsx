@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
 
         <div className="flex items-center gap-2.5 w-full">
-          <p className="relative w-full text-wrap md:text-left text-center flex-1 font-light italic text-[#e2e2e2] lg:text-xl md:text-lg text-[14px] tracking-[0] leading-[normal]">
+          <p className="md:px-0 px-3 relative w-full text-wrap md:text-left text-center flex-1 font-light italic text-[#e2e2e2] lg:text-xl md:text-lg text-[14px] tracking-[0] leading-[normal]">
             Turning ideas into clean, efficient code—specializing in full-stack
             web development.
           </p>

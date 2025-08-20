@@ -163,7 +163,7 @@ export default function Contact() {
             Socials
           </h3>
 
-          <div className="w-full self-stretch flex-1 flex flex-col lg:gap-6 md:gap-10 gap-14">
+          <div className="w-full self-stretch flex-1 flex flex-col lg:justify-between md:gap-20 gap-14">
             <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
               {socialLinksData.map((social, index) => (
                 <TooltipProvider key={social.alt}>
@@ -197,7 +197,7 @@ export default function Contact() {
                 </TooltipProvider>
               ))}
             </div>
-            <div className="self-stretch basis-1/2 flex flex-col gap-4 justify-center items-center text-neutral-400 flex-1">
+            <div className="self-stretch basis-1/2 flex flex-col gap-4 lg:justify-end justify-center items-center text-neutral-400 flex-1">
               <span className="md:text-lg text-base opacity-40">
                 Develop with:
               </span>

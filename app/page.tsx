@@ -1,6 +1,7 @@
 import Contact from "@/sections/Contact";
 import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
+import Playground from "@/sections/Playground";
 import Projects from "@/sections/Projects";
 import TechStack from "@/sections/TechStack";
 
@@ -12,8 +13,7 @@ export default function Landing() {
         <TechStack/>
         <Projects/>
         <Experience/>
-        <section id="playground" className="h-[400px] bg-amber-300 w-1/2 opacity-50 mx-auto rounded scroll-mt-[150px]">
-        </section>
+        <Playground/>
       </main>
       <Contact/>
     </>
