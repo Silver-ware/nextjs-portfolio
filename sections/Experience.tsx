@@ -7,7 +7,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -40,7 +40,11 @@ export default function Experience() {
         {awardsVisibility && (
           <div className="h-fit flex w-full rounded-xl overflow-hidden">
             <Swiper
-              modules={[Pagination, Navigation]}
+              modules={[Pagination, Navigation, Autoplay]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               navigation
               spaceBetween={20}
               slidesPerView={1}

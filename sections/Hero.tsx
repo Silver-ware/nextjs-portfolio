@@ -1,22 +1,31 @@
 // import { Button } from "./ui/button";
 import Image from "next/image";
-import { Computer } from "lucide-react";
+import SkillSetDrawer from "@/components/SkillSetDrawer";
 
 export default function Hero() {
   return (
-    <section id="home" className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-3 lg:px-[110px] md:px-[60px] px-6 w-full h-fit scroll-mt-[100px] ">
+    <section
+      id="home"
+      className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-3 lg:px-[110px] md:px-[60px] px-6 w-full h-fit scroll-mt-[100px] "
+    >
       <div className="flex flex-col flex-1 h-fit md:items-start items-center justify-center">
         <div className="inline-flex items-center">
           <p className="relative w-fit font-normal text-[#e2e2e2] tracking-[0] md:leading-[36px] text-wrap">
             <span className="font-normal md:inline block lg:text-4xl md:text-3xl text-base text-center text-[#e2e2e2] tracking-[0] leading-[30px]">
               {"Hi, I'm "}
             </span>
-            <span className="font-extrabold lg:text-4xl md:text-3xl text-2xl">Garry Caber</span>
-            <span className="font-normal text-[#e2e2e2] tracking-[0] leading-[30px] hidden lg:inline">
+            <span className="font-extrabold lg:text-4xl md:text-3xl text-2xl">
+              Garry Caber
+            </span>
+            <span className="font-normal text-[#e2e2e2] tracking-[0] leading-[30px] hidden lg:inline lg:text-4xl">
               {" & work like an "}
             </span>
-            <span className="font-extrabold hidden lg:inline">ant</span>
-            <span className="font-normal md:inline hidden text-[#e2e2e2] tracking-[0] leading-[30px]">.</span>
+            <span className="font-extrabold hidden lg:inline lg:text-4xl">
+              ant
+            </span>
+            <span className="font-normal md:inline hidden text-[#e2e2e2] tracking-[0] leading-[30px]">
+              .
+            </span>
           </p>
         </div>
 
@@ -34,20 +43,16 @@ export default function Hero() {
         </div>
 
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
-          <button className="cursor-pointer gap-1 inline-flex items-center justify-center px-3 py-2.5 bg-green-700 hover:bg-[#085D28] transition-all ease-in-out duration-500 rounded-[5px] border border-green-700 border-solid">
-            <Computer className="lg:w-5 lg:h-5 w-4 h-4 text-white"/>
-            <span className="relative w-fit h-fit font-normal text-white lg:text-base text-[14px] tracking-[0] leading-[normal]">
-              View Skill Set
-            </span>
-          </button>
+          <SkillSetDrawer/>
 
-          <button className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-[#52525226]  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-neutral-700">
-            <a 
-              href="#contact"
-              className="relative w-fit font-normal text-[#e2e2e2] lg:text-base text-[14px] tracking-[0] leading-[normal]">
+          <a href="#contact" className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-[#52525226]  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-neutral-700">
+            <span
+              
+              className="relative w-fit font-normal text-[#e2e2e2] lg:text-base text-[14px] tracking-[0] leading-[normal]"
+            >
               Contact Me
-            </a>
-          </button>
+            </span>
+          </a>
         </div>
       </div>
 

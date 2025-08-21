@@ -39,7 +39,12 @@ input[type=number] {
 
 /* Active bullet */
 .swiper-pagination-bullet-active {
+  border-radius: 4px !important;
+  width: 20px !important;
   background-color: #16A34A !important;
+  &:hover{
+    background-color: #18d45d !important;
+  }
 }
 
 .swiper-button-prev, .swiper-button-next {
