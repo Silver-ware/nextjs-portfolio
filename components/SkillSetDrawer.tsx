@@ -58,7 +58,7 @@ const skillSetMainInfo = [
 ];
 
 export default function SkillSetDrawer() {
-  const isMobile = useMediaQuery("(max-width: 640px)");
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const direction = isMobile ? "bottom" : "left";
 
   const [sortFilter, setSortFilters] = useState<{
@@ -127,7 +127,7 @@ export default function SkillSetDrawer() {
             ))}
           </Swiper>
         </div>
-        <div className="flex-1 flex flex-col w-full lg:max-w-[490px] max-w-[420px] bg-[#52525226] border border-solid border-neutral-700 rounded overflow-hidden">
+        <div className="flex-1 flex flex-col w-full lg:max-w-[490px] max-w-[420px] md:max-h-none max-h-[45vh] bg-[#52525226] border border-solid border-neutral-700 rounded overflow-hidden">
           <div className="flex w-full h-fit justify-between px-4 py-3 bg-[#52525226]">
             <span className="text-[#e2e2e2] flex gap-1 items-center font-medium">
               <FlaskConical className="w-6 h-6" />
