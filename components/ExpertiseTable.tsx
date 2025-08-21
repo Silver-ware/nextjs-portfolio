@@ -15,7 +15,7 @@ export default function ExpertiseTable({sortedData} : {sortedData: ExpertiseInte
             <th className="px-1 py-2">Activities</th>
           </tr>
         </thead>
-        <tbody className="font-light text-sm text-neutral-200">
+        <tbody className="font-light text-sm text-foreground">
           {sortedData.map((data) => (
             <tr key={data.name}>
               <td className="pl-3 pr-1 py-2">

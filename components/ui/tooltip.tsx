@@ -58,7 +58,7 @@ function TooltipContent({
         <ChevronUp
           aria-hidden
           className={cn(
-            "absolute w-5 h-5 pointer-events-none text-[#e5e5e5] transition-transform",
+            "absolute w-5 h-5 pointer-events-none text-foreground transition-transform",
             // bottom → top edge, pointing up (default)
             "group-data-[side=bottom]:-top-1.5 group-data-[side=bottom]:left-1/2 group-data-[side=bottom]:-translate-x-1/2",
             // top → bottom edge, rotate to point down

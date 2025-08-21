@@ -94,7 +94,7 @@ export default function SkillSetDrawer() {
           </span>
         </button>
       </DrawerTrigger>
-      <DrawerContent className="bg-[#52525226] flex flex-col items-center px-6 pt-3 pb-6 gap-3 backdrop-blur-md border-none text-[#e2e2e2]">
+      <DrawerContent className="bg-semi-transparent flex flex-col items-center px-6 pt-3 pb-6 gap-3 backdrop-blur-md border-none text-foreground">
         <DrawerHeader className="hidden">
           <DrawerTitle className="hidden"></DrawerTitle>
           <DrawerDescription className="hidden"></DrawerDescription>
@@ -114,7 +114,7 @@ export default function SkillSetDrawer() {
           >
             {skillSetMainInfo.map((info) => (
               <SwiperSlide key={info.title}>
-                <div className="bg-[#52525226] max-w-[384px] mx-auto flex flex-col justify-center items-center text-center text-[#e2e2e2] w-full pt-2 pb-8 px-6 h-full flex-1 self-stretch rounded-md">
+                <div className="bg-semi-transparent border border-neutral-700 max-w-[384px] mx-auto flex flex-col justify-center items-center text-center text-foreground w-full pt-2 pb-8 px-6 h-full flex-1 self-stretch rounded-md">
                   <span className="relative w-9 h-9">
                     <Image src={info.icons} alt={info.title} fill />
                   </span>
@@ -127,9 +127,9 @@ export default function SkillSetDrawer() {
             ))}
           </Swiper>
         </div>
-        <div className="flex-1 flex flex-col w-full lg:max-w-[490px] max-w-[420px] md:max-h-none max-h-[45vh] bg-[#52525226] border border-solid border-neutral-700 rounded overflow-hidden">
-          <div className="flex w-full h-fit justify-between px-4 py-3 bg-[#52525226]">
-            <span className="text-[#e2e2e2] flex gap-1 items-center font-medium">
+        <div className="flex-1 flex flex-col w-full lg:max-w-[490px] max-w-[420px] md:max-h-none max-h-[45vh] bg-semi-transparent border border-solid border-neutral-700 rounded overflow-hidden">
+          <div className="flex w-full h-fit justify-between px-4 py-3 bg-semi-transparent">
+            <span className="text-foreground flex gap-1 items-center font-medium">
               <FlaskConical className="w-6 h-6" />
               Expertise Table
             </span>
@@ -165,9 +165,9 @@ export default function SkillSetDrawer() {
                 onClick={() =>
                   setSortFilters((prev) => {
                     if (prev.sortBy !== "understanding") {
-                      return { sortBy: "understanding", direction: "asc" };
-                    } else if (prev.direction === "asc") {
                       return { sortBy: "understanding", direction: "desc" };
+                    } else if (prev.direction === "desc") {
+                      return { sortBy: "understanding", direction: "asc" };
                     } else {
                       return { sortBy: "", direction: "asc" };
                     }
@@ -187,7 +187,7 @@ export default function SkillSetDrawer() {
         </div>
         <DrawerFooter className="hidden">
           <DrawerClose>
-            <div className="text-[#e2e2e2]">Close</div>
+            <div className="text-foreground">Close</div>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>

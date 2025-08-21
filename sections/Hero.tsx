@@ -10,33 +10,33 @@ export default function Hero() {
     >
       <div className="flex flex-col flex-1 h-fit md:items-start items-center justify-center">
         <div className="inline-flex items-center">
-          <p className="relative w-fit font-normal text-[#e2e2e2] tracking-[0] md:leading-[36px] text-wrap">
-            <span className="font-normal md:inline block lg:text-4xl md:text-3xl text-base text-center text-[#e2e2e2] tracking-[0] leading-[30px]">
+          <p className="relative w-fit font-normal text-foreground tracking-[0] md:leading-[36px] text-wrap">
+            <span className="font-normal md:inline block lg:text-4xl md:text-3xl text-base text-center text-foreground tracking-[0] leading-[30px]">
               {"Hi, I'm "}
             </span>
             <span className="font-extrabold lg:text-4xl md:text-3xl text-2xl">
               Garry Caber
             </span>
-            <span className="font-normal text-[#e2e2e2] tracking-[0] leading-[30px] hidden lg:inline lg:text-4xl">
+            <span className="font-normal text-foreground tracking-[0] leading-[30px] hidden lg:inline lg:text-4xl">
               {" & work like an "}
             </span>
             <span className="font-extrabold hidden lg:inline lg:text-4xl">
               ant
             </span>
-            <span className="font-normal md:inline hidden text-[#e2e2e2] tracking-[0] leading-[30px]">
+            <span className="font-normal md:inline hidden text-foreground tracking-[0] leading-[30px]">
               .
             </span>
           </p>
         </div>
 
         <div className="inline-flex md:py-2 items-center gap-2.5">
-          <h2 className="relative w-fit font-extrabold text-[#e2e2e2] lg:text-5xl md:text-[42px] text-[28px] tracking-[0] md:leading-[40px] leading-normal">
+          <h2 className="relative w-fit font-extrabold text-foreground lg:text-5xl md:text-[42px] text-[28px] tracking-[0] md:leading-[40px] leading-normal">
             Full Stack Developer
           </h2>
         </div>
 
         <div className="flex items-center gap-2.5 w-full">
-          <p className="md:px-0 px-3 relative w-full text-wrap md:text-left text-center flex-1 font-light italic text-[#e2e2e2] lg:text-xl md:text-lg text-[14px] tracking-[0] leading-[normal]">
+          <p className="md:px-0 px-3 relative w-full text-wrap md:text-left text-center flex-1 font-light italic text-foreground lg:text-xl md:text-lg text-[14px] tracking-[0] leading-[normal]">
             Turning ideas into clean, efficient code—specializing in full-stack
             web development.
           </p>
@@ -45,10 +45,10 @@ export default function Hero() {
         <div className="inline-flex items-start gap-2.5 px-0 py-2.5">
           <SkillSetDrawer/>
 
-          <a href="#contact" className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-[#52525226]  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-neutral-700">
+          <a href="#contact" className="inline-flex items-center justify-center px-3 py-2.5 hover:bg-semi-transparent  transition-all ease-in-out duration-500 rounded-[5px] border border-solid border-primary-outline">
             <span
               
-              className="relative w-fit font-normal text-[#e2e2e2] lg:text-base text-[14px] tracking-[0] leading-[normal]"
+              className="relative w-fit font-normal text-foreground lg:text-base text-[14px] tracking-[0] leading-[normal]"
             >
               Contact Me
             </span>

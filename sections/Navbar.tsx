@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import {
   Tooltip,
   TooltipContent,
@@ -23,6 +24,7 @@ const navigationItems: string[] = [
 ];
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme();
   const [activeLink, setActiveLink] = useState("home");
 
   useEffect(() => {
@@ -52,7 +54,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="flex w-full h-fit items-center md:justify-between gap-2.5 lg:px-[25px] md:px-3 pl-[25px] pr-3 lg:py-2.5 md:py-1.5 py-2.5 bg-[#1a1a1a] border-b border-solid border-neutral-700 sticky top-0 z-50 overflow-x-auto">
+    <header className="flex w-full h-fit items-center md:justify-between gap-2.5 lg:px-[25px] md:px-3 pl-[25px] pr-3 lg:py-2.5 md:py-1.5 py-2.5 bg-background border-b border-solid border-primary-outline sticky top-0 z-50 overflow-x-auto">
       <div className="inline-flex md:w-fit w-full items-center justify-center lg:pl-5 lg:pr-2.5 md:pl-3 md:pr-1 pl-5 pr-2.5 py-2.5">
         <CopyEmail email={"garryworkwithit@gmail.com"} />
       </div>
@@ -65,10 +67,10 @@ export default function Navbar() {
                 <NavigationMenuLink
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setActiveLink(item.toLowerCase())}
-                  className={`inline-flex items-center gap-2.5 lg:px-2.5 md:px-1 py-[3px] border-b border-solid cursor-pointer rounded-none text-[#e2e2e2] transition-all duration-200 ease-in-out ${
+                  className={`inline-flex items-center gap-2.5 lg:px-2.5 md:px-1 py-[3px] border-b border-solid cursor-pointer rounded-none text-foreground transition-all duration-200 ease-in-out ${
                     activeLink === item.toLowerCase()
                       ? "border-green-500"
-                      : "border-[#1a1a1a]"
+                      : "border-background"
                   } hover:border-green-500 hover:text-green-500`}
                 >
                   <div className="relative w-fit font-medium lg:text-xl md:text-base tracking-[0] leading-[normal] group-">
@@ -82,7 +84,7 @@ export default function Navbar() {
 
         <div className="inline-flex items-center justify-center lg:gap-7 gap-3 pl-0 pr-2 py-0">
           <TooltipProvider>
-            <Tooltip>
+            <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <a
                   href="/assets/files/resume.pdf"
@@ -90,7 +92,9 @@ export default function Navbar() {
                   className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0"
                 >
                   <Image
-                    src="/assets/icons/darkmodecv.png"
+                    src={`/assets/icons/${
+                      theme === "light" ? "light" : "dark"
+                    }modecv.png`}
                     alt="cv-icon"
                     sizes="(max-width: 35px) 100vw"
                     fill
@@ -98,7 +102,7 @@ export default function Navbar() {
                 </a>
               </TooltipTrigger>
               <TooltipContent side="bottom" sideOffset={10}>
-                <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mt-1 transition-all duration-200    ease-in-out">
+                <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1 text-foreground text-center mt-1 transition-all duration-200    ease-in-out">
                   <span className="lg:text-sm text-xs">
                     Download
                     <br />
@@ -110,13 +114,16 @@ export default function Navbar() {
           </TooltipProvider>
 
           <TooltipProvider>
-            <Tooltip>
+            <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <button
                   className="cursor-pointer relative lg:w-[32px] md:w-7 w-6 lg:h-[33px] md:h-[27px] h-6"
+                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 >
                   <Image
-                    src="/assets/icons/lightmodebtn.png"
+                    src={`/assets/icons/${
+                      theme === "light" ? "dark" : "light"
+                    }modebtn.png`}
                     alt="cv-icon"
                     sizes="(max-width: 35px) 100vw"
                     fill
@@ -124,8 +131,10 @@ export default function Navbar() {
                 </button>
               </TooltipTrigger>
               <TooltipContent side="left" sideOffset={10}>
-                <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1.5 text-[#e2e2e2] text-center mt-1 transition-all duration-200    ease-in-out">
-                  <span className="lg:text-sm text-xs">Switch to Light Mode</span>
+                <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1.5 text-foreground text-center mt-1 transition-all duration-200    ease-in-out">
+                  <span className="lg:text-sm text-xs">
+                    Switch to Light Mode
+                  </span>
                 </div>
               </TooltipContent>
             </Tooltip>

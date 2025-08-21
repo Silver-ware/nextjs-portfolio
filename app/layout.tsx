@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins, Quantico } from "next/font/google";
 import Navbar from "@/sections/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -24,17 +25,25 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${quantico.variable}`}
       style={{ scrollBehavior: "smooth" }}
+      suppressHydrationWarning
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Garry Portfolio</title>
       </head>
       <body
-        className={`bg-[#1a1a1a] overflow-x-hidden antialiased`}
+        className={`bg-background overflow-x-hidden antialiased`}
         cz-shortcut-listen="false"
       >
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

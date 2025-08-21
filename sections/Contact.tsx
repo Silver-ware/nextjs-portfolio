@@ -142,7 +142,7 @@ export default function Contact() {
           <textarea
             placeholder="Message"
             required
-            className="flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2]"
+            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2]"
           />
 
           <div className="flex items-center justify-end gap-2.5 w-full rounded">
