@@ -15,6 +15,10 @@ import {
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import { CopyEmail } from "@/components/EmailCopyable";
+import lightCV from "@/public/assets/icons/lightmodecv.png";
+import darkCV from "@/public/assets/icons/darkmodecv.png";
+import CVIcon from "@/components/CVIconSSR";
+import ModeIcon from "@/components/ModeIconSSR";
 
 const navigationItems: string[] = [
   "Home",
@@ -24,8 +28,11 @@ const navigationItems: string[] = [
 ];
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const { theme: rawTheme, setTheme } = useTheme();
   const [activeLink, setActiveLink] = useState("home");
+
+  const theme = rawTheme || "dark";
+  const cvSrc = theme === "light" ? lightCV : darkCV;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,18 +98,11 @@ export default function Navbar() {
                   download={"garry-caber-resume.pdf"}
                   className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0"
                 >
-                  <Image
-                    src={`/assets/icons/${
-                      theme === "light" ? "light" : "dark"
-                    }modecv.png`}
-                    alt="cv-icon"
-                    sizes="(max-width: 35px) 100vw"
-                    fill
-                  />
+                  <CVIcon/>
                 </a>
               </TooltipTrigger>
               <TooltipContent side="bottom" sideOffset={10}>
-                <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1 text-foreground text-center mt-1 transition-all duration-200    ease-in-out">
+                <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1 text-foreground text-center mt-1 transition-all duration-200 ease-in-out">
                   <span className="lg:text-sm text-xs">
                     Download
                     <br />
@@ -120,14 +120,7 @@ export default function Navbar() {
                   className="cursor-pointer relative lg:w-[32px] md:w-7 w-6 lg:h-[33px] md:h-[27px] h-6"
                   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 >
-                  <Image
-                    src={`/assets/icons/${
-                      theme === "light" ? "dark" : "light"
-                    }modebtn.png`}
-                    alt="cv-icon"
-                    sizes="(max-width: 35px) 100vw"
-                    fill
-                  />
+                  <ModeIcon/>
                 </button>
               </TooltipTrigger>
               <TooltipContent side="left" sideOffset={10}>

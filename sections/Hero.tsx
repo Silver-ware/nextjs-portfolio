@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-2.5 md:pl-10 pr-0 md:py-10 py-3">
-        <div className="relative lg:w-[330px] lg:h-[330px] md:w-60 md:h-60 w-56 h-56 rounded-full shadow-[0px_4px_95px_-15px_rgba(111,231,111,0.25)] border border-neutral-700 overflow-hidden">
+        <div className="relative lg:w-[330px] lg:h-[330px] md:w-60 md:h-60 w-56 h-56 rounded-full shadow-[0px_4px_95px_-15px] shadow-primary-gradient border border-neutral-700 overflow-hidden">
           <Image
             className="object-cover"
             src="/assets/images/profile.jpg"

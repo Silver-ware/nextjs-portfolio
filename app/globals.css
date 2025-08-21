@@ -80,6 +80,7 @@ input[type=number] {
   --foreground: oklch(21.78% 0.000 0);
   --primary-outline: var(--color-neutral-700);
   --semi-transparent: oklch(69.67% 0.035 152.18 / var(--transparency));
+  --primary-gradient: rgba(111,231,111,0.75); 
   /* --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -117,6 +118,7 @@ input[type=number] {
   --foreground: oklch(91.28% 0.000 0);
   --primary-outline: oklch(37.1% 0 0);
   --semi-transparent: oklch(43.86% 0.000 0) / var(--transparency);
+  --primary-gradient: rgba(6, 73, 6, 0.40);
   /* --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -156,6 +158,7 @@ input[type=number] {
   --color-foreground: var(--foreground);
   --color-primary-outline: var(--color-primary-outline);
   --color-semi-transparent: var(--semi-transparent);
+  --color-primary-gradient: var(--primary-gradient);
   /* --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
