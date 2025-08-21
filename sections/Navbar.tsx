@@ -13,10 +13,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 import { CopyEmail } from "@/components/EmailCopyable";
-import lightCV from "@/public/assets/icons/lightmodecv.png";
-import darkCV from "@/public/assets/icons/darkmodecv.png";
 import CVIcon from "@/components/CVIconSSR";
 import ModeIcon from "@/components/ModeIconSSR";
 
@@ -28,11 +25,8 @@ const navigationItems: string[] = [
 ];
 
 export default function Navbar() {
-  const { theme: rawTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [activeLink, setActiveLink] = useState("home");
-
-  const theme = rawTheme || "dark";
-  const cvSrc = theme === "light" ? lightCV : darkCV;
 
   useEffect(() => {
     const handleScroll = () => {

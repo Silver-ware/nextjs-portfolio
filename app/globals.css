@@ -78,6 +78,7 @@ input[type=number] {
   --transparency: 0.15;
   --background: oklch(98.81% 0.000 0);
   --foreground: oklch(21.78% 0.000 0);
+  --secondary-foreground: var(--color-neutral-600);
   --primary-outline: var(--color-neutral-700);
   --semi-transparent: oklch(69.67% 0.035 152.18 / var(--transparency));
   --primary-gradient: rgba(111,231,111,0.75); 
@@ -116,8 +117,9 @@ input[type=number] {
 .dark {
   --background: oklch(21.78% 0.000 0);
   --foreground: oklch(91.28% 0.000 0);
+  --secondary-foreground: var(--color-neutral-400);
   --primary-outline: oklch(37.1% 0 0);
-  --semi-transparent: oklch(43.86% 0.000 0) / var(--transparency);
+  --semi-transparent: #52525226;
   --primary-gradient: rgba(6, 73, 6, 0.40);
   /* --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -156,6 +158,7 @@ input[type=number] {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-primary-outline: var(--color-primary-outline);
   --color-semi-transparent: var(--semi-transparent);
   --color-primary-gradient: var(--primary-gradient);

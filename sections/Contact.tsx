@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-[#52525226] relative"
+      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-semi-transparent relative"
     >
       <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
@@ -73,10 +73,10 @@ export default function Contact() {
         />
       </div>
       <div className="inline-flex w-full flex-col items-center justify-center absolute lg:top-[-81px] md:top-[-61px] top-[-41px] left-[50%] -translate-x-[50%]">
-        <h2 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[32px] text-2xl tracking-[0] leading-[30px] whitespace-nowrap">
+        <h2 className="relative w-fit font-semibold text-foreground lg:text-[32px] text-2xl tracking-[0] leading-[30px] whitespace-nowrap">
           Reach Out Today
         </h2>
-        <p className="relative w-fit font-light text-[#e2e2e2] lg:text-xl text-xs text-center tracking-[0] lg:leading-[32px] leading-[18px] px-8">
+        <p className="relative w-fit font-light text-foreground lg:text-xl text-xs text-center tracking-[0] lg:leading-[32px] leading-[18px] px-8">
           {
             "I'd love to hear from you! Send me a message using the form below, and I'll be in touch soon."
           }
@@ -85,7 +85,7 @@ export default function Contact() {
 
       <div className="inline-flex items-center gap-2.5">
         <ContactRound className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
-        <h2 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
+        <h2 className="relative w-fit font-semibold text-foreground lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
           Contact
         </h2>
       </div>
@@ -104,14 +104,14 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              className="peer w-full items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2] focus:placeholder-transparent"
+              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground focus:placeholder-transparent"
             />
             <span
-              className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
                 !!formData.name
                   ? "-top-[18px] opacity-100"
                   : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
-              } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
+              } bg-background peer-focus:border peer-focused:border-foreground transition-all duration-200`}
             >
               Name
             </span>
@@ -126,14 +126,14 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, email: e.target.value }))
               }
-              className="peer w-full items-center px-5 py-2.5 bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2] focus:placeholder-transparent"
+              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground focus:placeholder-transparent"
             />
             <span
-              className={`absolute text-neutral-400 py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
                 !!formData.email
                   ? "-top-[18px] opacity-100"
                   : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
-              } bg-[#525252] peer-focus:border peer-focused:border-[#e2e2e2] transition-all duration-200`}
+              } bg-background peer-focus:border peer-focused:border-foreground transition-all duration-200`}
             >
               Emaill
             </span>
@@ -142,13 +142,13 @@ export default function Contact() {
           <textarea
             placeholder="Message"
             required
-            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-[#52525226] rounded border border-solid border-neutral-700 text-neutral-400 lg:text-base text-sm font-semibold outline-0 focus:border-[#e2e2e2]"
+            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
           />
 
           <div className="flex items-center justify-end gap-2.5 w-full rounded">
             <button
               type="submit"
-              className="relative z-50 inline-flex items-center justify-center gap-2.5 px-4 py-1.5 bg-green-600 hover:bg-[#085D28] hover:scale-105 transition-all ease-in-out duration-500  rounded-[5px] border border-solid border-green-700 outline-0"
+              className="cursor-pointer relative z-50 inline-flex items-center justify-center gap-2.5 px-4 py-1.5 bg-green-600 hover:bg-[#085D28] hover:scale-105 transition-all ease-in-out duration-500  rounded-[5px] border border-solid border-green-700 outline-0"
             >
               <Send className="lg:w-5 lg:h-5 w-4 h-4 text-[#e2e2e2]" />
               <div className="text-[#e2e2e2] lg:text-lg text-base relative w-fit mt-[-1.00px] font-semibold tracking-[0] leading-[normal]">
@@ -159,7 +159,7 @@ export default function Contact() {
         </form>
 
         <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] md:items-start items-center gap-3 lg:pl-10 lg:pr-5 md:pt-0 pt-8">
-          <h3 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
+          <h3 className="relative w-fit font-semibold text-foreground lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
             Socials
           </h3>
 
@@ -175,7 +175,7 @@ export default function Contact() {
                         key={index}
                         className="group inline-flex items-center gap-3 hover:scale-110 hover:bg-green-700 transition-all duration-300 ease-in-out cursor-pointer rounded-full"
                       >
-                        <div className="lg:w-[50px] md:w-11 w-9 lg:h-[50px] md:h-11 h-9 text-[#e2e2e2] relative">
+                        <div className="lg:w-[50px] md:w-11 w-9 lg:h-[50px] md:h-11 h-9 relative">
                           <Image
                             className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
                             src={social.icon}
@@ -186,7 +186,7 @@ export default function Contact() {
                       </a>
                     </TooltipTrigger>
                     <TooltipContent sideOffset={5}>
-                      <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-[#e2e2e2] text-center mb-1 transition-all duration-200    ease-in-out">
+                      <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1 text-foreground text-center mb-1 transition-all duration-200    ease-in-out">
                         <span className="text-sm">Discover me on</span>
                         <span className="block text-base font-medium text-green-500">
                           {social.alt}
@@ -197,7 +197,7 @@ export default function Contact() {
                 </TooltipProvider>
               ))}
             </div>
-            <div className="self-stretch basis-1/2 flex flex-col gap-4 lg:justify-end justify-center items-center text-neutral-400 flex-1">
+            <div className="self-stretch basis-1/2 flex flex-col gap-4 lg:justify-end justify-center items-center text-secondary-foreground flex-1">
               <span className="md:text-lg text-base opacity-40">
                 Develop with:
               </span>
@@ -217,7 +217,7 @@ export default function Contact() {
                         </div>
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>
-                        <div className="rounded backdrop-blur-sm bg-[#52525226] px-2 py-1 text-center mb-1 transition-all duration-200 ease-in-out">
+                        <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1 text-center mb-1 transition-all duration-200 ease-in-out">
                           <span
                             className={`lg:text-base text-sm ${
                               icons.name === "Figma"
@@ -228,7 +228,7 @@ export default function Contact() {
                                 ? "text-[#3178C6]"
                                 : icons.name === "TailwindCSS"
                                 ? "text-[#06B6D4]"
-                                : "text-[#e2e2e2]"
+                                : "text-foreground"
                             }`}
                           >
                             {icons.name}

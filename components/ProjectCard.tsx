@@ -23,7 +23,7 @@ export default function ProjCards({project}: {project: ProjectInterface}) {
           </div>
 
           <div className="flex w-full items-start gap-2.5">
-            <p className="relative flex-1 font-light text-neutral-400 text-sm tracking-[0] leading-[normal]">
+            <p className="relative flex-1 font-light text-secondary-foreground text-sm tracking-[0] leading-[normal]">
               {project.description}
             </p>
           </div>
