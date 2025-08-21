@@ -53,6 +53,27 @@ input[type=number] {
 }
 
 
+/* Scrollbar for Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* .custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb; 
+} */
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #16a34a; /* Tailwind green-600 */
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #16a34a #e5e7eb;
+}
+
 /* 
 @custom-variant dark (&:is(.dark *));
 

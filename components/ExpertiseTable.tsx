@@ -5,7 +5,7 @@ import { techStackData } from "@/data/techstackbtn";
 
 export default function ExpertiseTable({sortedData} : {sortedData: ExpertiseInterface[]}) {
   return (
-    <div className="flex-1 self-stretch w-full overflow-y-auto bg-transparent">
+    <div className="flex-1 self-stretch w-full custom-scrollbar overflow-y-auto bg-transparent">
       <table className="w-full">
         <thead>
           <tr className="font-extralight text-[14px] sticky top-0 z-20 bg-[#171717] text-neutral-300">

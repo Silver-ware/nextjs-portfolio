@@ -26,7 +26,7 @@ export default function Experience() {
 
       <div className="inline-flex gap-2.5 md:flex-col flex-col-reverse items-start w-full">
         <div className="h-fit w-full rounded-xl overflow-hidden">
-          <div className="flex items-start pl-1 pr-4 py-5 w-full bg-[#52525226] rounded-xl overflow-x-auto">
+          <div className="flex items-start pl-1 pr-4 py-5 w-full bg-[#52525226] rounded-xl overflow-x-auto custom-scrollbar">
             {experienceData.map((experience, index) => (
               <ExpCards
                 experience={experience}
