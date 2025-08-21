@@ -13,7 +13,7 @@ export const techStackData: StackButton[] = [
         group: "primary",
     },
     {
-        name: "Vue",
+        name: "VueJS",
         icon: "/assets/icons/vue-icon.png",
         group: "primary",
     },
@@ -23,7 +23,7 @@ export const techStackData: StackButton[] = [
         group: "primary",
     },
     {
-        name: "Next.JS",
+        name: "NextJS",
         icon: "/assets/icons/nextjs-icon.png",
         group: "primary",
     },

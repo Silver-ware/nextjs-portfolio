@@ -26,7 +26,7 @@ export default function TechStack() {
     <section className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full">
       <div className="inline-flex items-center gap-2.5">
         <Layers className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
-        <h2 className="relative w-fit font-semibold text-[#e2e2e2] lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
+        <h2 className="relative w-fit font-semibold text-foreground lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
           Tech Stack
         </h2>
       </div>
@@ -46,7 +46,7 @@ export default function TechStack() {
                       selectedStack.includes(tech.name)
                         ? "border-green-700 shadow-sm shadow-green-400"
                         : "border-neutral-700"
-                    } cursor-pointer inline-flex items-center justify-center gap-2 px-3 lg:py-2 py-1 bg-[#52525226] rounded-[5px] border border-solid  hover:bg-green-700`}
+                    } group cursor-pointer inline-flex items-center justify-center gap-2 px-3 lg:py-2 py-1 bg-semi-transparent rounded-[5px] border border-solid  hover:bg-green-700`}
                     onClick={() =>
                       setSelectedStack((prev) =>
                         prev.includes(tech.name)
@@ -58,14 +58,14 @@ export default function TechStack() {
                     {tech.icon && (
                       <span className="block relative md:w-7 w-[18px] md:h-7 h-[18px]">
                         <Image
-                          className={`${tech.name !== "Next.JS" && "drop-shadow-[2px_2px_0_black]"}`}
+                          className={`${tech.name !== "NextJS" && "drop-shadow-[2px_2px_0_black]"}`}
                           src={tech.icon}
                           alt={tech.name}
                           fill
                         />
                       </span>
                     )}
-                    <div className="relative w-fit font-medium text-[#e2e2e2] md:text-lg text-base tracking-[0] leading-[normal]">
+                    <div className="group-hover:text-[#e2e2e2] relative w-fit font-medium text-foreground md:text-lg text-base tracking-[0] leading-[normal]">
                       {tech.name}
                     </div>
                   </button>
@@ -77,7 +77,7 @@ export default function TechStack() {
         {/* Show all button */}
         <div className="inline-flex w-fit justify-center items-center">
           <div
-            className="cursor-pointer inline-flex items-center justify-center gap-1 px-3 md:py-2 py-1 bg-[#52525226] rounded-[5px] border border-solid border-neutral-700 hover:bg-green-700"
+            className="cursor-pointer inline-flex items-center justify-center gap-1 px-3 md:py-2 py-1 bg-semi-transparent rounded-[5px] border border-solid border-neutral-700 hover:bg-green-700"
             onClick={() =>
               setShowableList((prev) => {
                 const extraGroups = [
@@ -94,9 +94,9 @@ export default function TechStack() {
           >
             {" "}
             {stackShowableList.length === 5 ? (
-              <OctagonMinus className="md:w-6 w-4 md:h-6 h-4 text-[#e2e2e2]" />
+              <OctagonMinus className="md:w-6 w-4 md:h-6 h-4 text-foreground" />
             ) : (
-              <RectangleEllipsis className="md:w-7 w-5 md:h-7 h-5 text-[#e2e2e2]" />
+              <RectangleEllipsis className="md:w-7 w-5 md:h-7 h-5 text-foreground" />
             )}
           </div>
         </div>
