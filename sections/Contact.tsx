@@ -52,21 +52,36 @@ export default function Contact() {
       id="contact"
       className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-semi-transparent relative"
     >
-      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
+      {/* <div
+        className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] 
+          lg:top-[-120px] md:top-[-100px] top-[-80px] 
+          left-1/2 -translate-x-1/2 scale-y-[-1] 
+          bg-[url('/assets/svg/waves-opacity.svg')] bg-no-repeat bg-top 
+          bg-[length:130%_100%] md:bg-[length:115%_100%] lg:bg-[length:100%_100%]"
+      ></div> */}
+      <div className="absolute w-full overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
+          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-svg-1"
           fill
         />
         <Image
+          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-sv-2"
           fill
         />
       </div>
-      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] top-0 left-[50%] -translate-x-[50%]">
-        <Image src="/assets/svg/waves.svg" alt="transparent-svg-1" fill />
+      <div className="absolute w-full overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] top-0 left-[50%] -translate-x-[50%]">
         <Image
+          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves.svg"
+          alt="transparent-svg-1"
+          fill
+        />
+        <Image
+          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-sv-2"
           fill
@@ -244,8 +259,9 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="absolute lg:w-full md:w-[115%] w-[130%] lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
+      <div className="absolute w-full overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
+          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
           src="/assets/svg/waves-opacity.svg"
           alt="transparent-sv-2"
           fill

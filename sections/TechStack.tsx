@@ -37,7 +37,7 @@ export default function TechStack() {
             stackShowableList.includes(group.name) && (
               <div
                 key={group.name}
-                className="flex w-fit flex-wrap md:flex-nowrap justify-center border-r pr-4 border-neutral-700 items-start gap-[12px_12px]"
+                className="flex w-fit flex-wrap lg:flex-nowrap md:justify-start justify-center border-r pr-4 border-neutral-700 items-start gap-[12px_12px]"
               >
                 {group.items.map((tech, index) => (
                   <button
