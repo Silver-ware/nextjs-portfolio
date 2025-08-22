@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/components/ScrollToTop";
 import Contact from "@/sections/Contact";
 import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
@@ -16,6 +17,7 @@ export default function Landing() {
         <Playground/>
       </main>
       <Contact/>
+      <ScrollToTopButton/>
     </>
   );
 }
