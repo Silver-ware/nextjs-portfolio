@@ -10,11 +10,12 @@ import { projectsData } from "@/data/projects";
 import ProjCards from "@/components/ProjectCard";
 import { useMediaQuery } from "@/components/use-media-query";
 import { useState, useMemo, useEffect } from "react";
+import ProjectOverlay from "@/components/ProjectOverlay";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
-
   const [inputValue, setInputValue] = useState(currentPage.toString());
+  const [overlayImages, setOverlayImages] = useState<string[] | null>(null);
 
   useEffect(() => {
     setInputValue(currentPage.toString());
@@ -60,9 +61,20 @@ export default function Projects() {
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-center gap-[24px_36px] px-0 py-2.5 w-full">
         {limitedProjects.map((project) => (
-          <ProjCards project={project} key={project.id} />
+          <ProjCards
+            project={project}
+            key={project.id}
+            onOpenOverlay={setOverlayImages}
+          />
         ))}
       </div>
+
+      {overlayImages && (
+        <ProjectOverlay
+          images={overlayImages}
+          onClose={() => setOverlayImages(null)}
+        />
+      )}
 
       {/* Mobile Pagination */}
       <div className="flex w-full md:hidden items-center justify-end gap-1">

@@ -6,7 +6,13 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-export default function ProjCards({ project }: { project: ProjectInterface }) {
+export default function ProjCards({
+  project,
+  onOpenOverlay,
+}: {
+  project: ProjectInterface;
+  onOpenOverlay: React.Dispatch<React.SetStateAction<string[] | null>>;
+}) {
   return (
     <Card
       className="cursor-pointer flex flex-col w-[300px] h-fit items-start justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700
@@ -25,15 +31,12 @@ export default function ProjCards({ project }: { project: ProjectInterface }) {
           slidesPerView={1}
           loop={true}
           pagination={{ clickable: true }}
+          onClick={() => onOpenOverlay(project.images)}
         >
           {project.images.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="self-stretch relative h-38 rounded overflow-hidden">
-                <Image
-                  src={image}
-                  alt={`${project.title}-image`}
-                  fill
-                />
+                <Image src={image} alt={`${project.title}-image`} fill />
               </div>
             </SwiperSlide>
           ))}

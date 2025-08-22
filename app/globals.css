@@ -92,6 +92,27 @@ div.projects-swiper .swiper-pagination-bullet {
   --swiper-navigation-size: 18px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  width: 28px !important;
+  height: 20px !important;
+}
+
+/* Increase arrow size itself */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px !important;
+  font-weight: bolder !important; 
+  color: var(--color-green-700) !important; 
+   text-shadow:
+    -2px -2px 0 var(--foreground),  
+     2px -2px 0 var(--foreground),
+    -2px  2px 0 var(--foreground),
+     2px  2px 0 var(--foreground);
+  /* -webkit-text-stroke: 1px var(--foreground); */
+  /* text-stroke: 2px var(--foreground);   */
+}
 
 /* Scrollbar for Webkit browsers */
 .custom-scrollbar::-webkit-scrollbar {

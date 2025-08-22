@@ -21,7 +21,7 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/pango-adventure/pango-2.png",
       "/assets/projects/pango-adventure/pango-3.png",
       "/assets/projects/pango-adventure/pango-4.png",
-      "/assets/projects/pango-adventure/pango-5.png",
+      "/assets/projects/pango-adventure/pango-7.png",
       "/assets/projects/pango-adventure/pango-6.png",
     ],
     technologies: ["Django", "Tailwind", "jQuery", "TypeScript", "SQLite"],
