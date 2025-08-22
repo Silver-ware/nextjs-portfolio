@@ -10,7 +10,7 @@ export default function ProjCards({project}: {project: ProjectInterface}) {
       <CardContent className="p-0 w-full">
         <div className="self-stretch relative h-36 rounded overflow-hidden">
           <Image
-            src={project.image}
+            src={project.images[0]}
             alt={`${project.title}-image`}
             fill
           />

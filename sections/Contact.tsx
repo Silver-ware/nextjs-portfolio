@@ -94,7 +94,7 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-semi-transparent relative"
+      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-semi-transparent relative md:scroll-mt-[100px] scroll-mt-[120px]"
     >
       {/* <div
         className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] 

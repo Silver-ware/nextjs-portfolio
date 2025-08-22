@@ -1,6 +1,6 @@
 "use client";
 import { Computer } from "lucide-react";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import {
   Drawer,
@@ -19,22 +19,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import ExpertiseTable from "./ExpertiseTable";
 import { expertiseData } from "@/data/expertise";
-
-function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [matches, query]);
-
-  return matches;
-}
+import { useMediaQuery } from "./use-media-query";
 
 const skillSetMainInfo = [
   {
