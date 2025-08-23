@@ -4,35 +4,48 @@ export interface AwardsCertificatesInterface {
   details: string;
   date: string;
   competitionName: string;
+  image: string;
 }
 
 export const awardsAndCertificatesData: AwardsCertificatesInterface[] = [
   {
     id: 1,
-    title: "Best in Web Development",
-    details: "Awarded for creating an innovative project with modern frameworks.",
-    date: "March 2023",
-    competitionName: "University IT Expo",
+    title: "Second Place",
+    details: "Outstanding performance during the conduct of ACLC Week 2023.",
+    date: "April 2023",
+    competitionName: "Web Designing & Development",
+    image: "/assets/awards/award-1.jpg",
   },
   {
     id: 2,
-    title: "Certified JavaScript Developer",
-    details: "Credential earned for demonstrating advanced JavaScript skills.",
-    date: "July 2023",
-    competitionName: "HackerRank Skills Certification",
+    title: "C++ Excellence",
+    details: "Proficiency award on C++ Programming Language.",
+    date: "July 2025",
+    competitionName: "Commencement Exercises",
+     image: "/assets/awards/award-2.jpg",
   },
   {
     id: 3,
-    title: "AWS Cloud Practitioner",
-    details: "Validated knowledge of cloud fundamentals and AWS services.",
-    date: "January 2024",
-    competitionName: "Amazon Web Services Certification",
+    title: "First Place",
+    details: "Theme: Mirroring Back the Silver Years of Resillience.",
+    date: "April 26, 2022",
+    competitionName: "IT Skills Competition - C++ Programming",
+     image: "/assets/awards/award-3.jpg",
   },
   {
     id: 4,
-    title: "Outstanding Intern Award",
-    details: "Recognized for exceptional contribution during internship.",
-    date: "April 2025",
-    competitionName: "Symphonics Co. LTD Internship Program",
+    title: "Cum Laude",
+    details: "Academic Excellence: Evidence of discipline and hardwork.",
+    date: "July 2025",
+    competitionName: "Commencement Excersices",
+     image: "/assets/awards/award-4.jpg",
   },
+  {
+    id: 5,
+    title: "First Place",
+    details: "Theme: Leading Innovation Altitude",
+    date: "October 10, 2023",
+    competitionName: "Java Programming Competition",
+     image: "/assets/awards/award-5.jpg",
+  }
 ];

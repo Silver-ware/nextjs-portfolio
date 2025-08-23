@@ -19,13 +19,13 @@ export default function ProjectOverlay({
     >
       <button
         onClick={() => onClose(null)}
-        className="cursor-pointer hover:scale-110 absolute top-6 right-6 text-green-900 text-2xl font-extrabold"
+        className="cursor-pointer hover:scale-110 absolute top-6 right-6 text-title text-2xl font-extrabold"
       >
         ✕
       </button>
-      <div className="lg:w-[70vw] lg:h-[85vh] md:w-[80vw] md:h-[70vh] w-[92vw] h-[50vh] lg:rounded-2xl rounded-sm border-1 border-neutral-700" onClick={(e) => e.stopPropagation()}>
+      <div className="lg:w-[70vw] md:w-[80vw] w-[90vw] h-fit lg:rounded-2xl rounded-sm border-1 border-neutral-700" onClick={(e) => e.stopPropagation()}>
         <Swiper
-          className="lg:w-[70vw] lg:h-[85vh] md:w-[80vw] md:h-[70vh] w-[92vw] h-[50vh] my-0 lg:rounded-2xl rounded-sm "
+          className="lg:w-[70vw] md:w-[80vw] w-[90vw] h-auto my-0 lg:rounded-2xl rounded-sm "
           modules={[Pagination, Autoplay, Navigation]}
           navigation
           autoplay={{
@@ -39,7 +39,7 @@ export default function ProjectOverlay({
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full">
+              <div className="relative w-full aspect-3/2 max-h-[95vh]">
                 <Image
                   src={image}
                   alt={`overlay-image-${index}`}

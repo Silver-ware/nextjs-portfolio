@@ -64,6 +64,7 @@ export default function Hero() {
             alt="profile"
             sizes="(max-width: 330px) 100vw"
             fill
+            priority
           />
           {/* <img className="w-full h-full object-cover" alt="Profile" src="" /> */}
         </div>

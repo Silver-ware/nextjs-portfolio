@@ -268,6 +268,7 @@ export default function Contact() {
                             className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
                             src={social.icon}
                             alt={social.alt}
+                            sizes="(max-width: 768px) 36px, (max-width: 1024px) 44px, 50px"
                             fill
                           />
                         </div>
@@ -301,7 +302,12 @@ export default function Contact() {
                               : "lg:w-10 lg:h-10 w-8 h-8"
                           } relative z-20 opacity-30 hover:opacity-80 hover:scale-105 transition-all`}
                         >
-                          <Image src={icons.source} alt={icons.name} fill />
+                          <Image
+                            src={icons.source}
+                            alt={icons.name}
+                            sizes={"(max-width: 1024px) 32px, 40px"}
+                            fill
+                          />
                         </div>
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>
@@ -330,6 +336,25 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="w-fit left-2 flex gap-0.5 h-fit text-center absolute bottom-2 text-foreground text-xs opacity-50">
+        <span>Icons: </span>
+        <a
+          href="https://www.flaticon.com/authors/any-icon"
+          className="hover:text-green-700"
+          title="Any Icon"
+        >
+          {`Light Mode [Any Icon], `}
+        </a>
+        <a
+          href="https://www.flaticon.com/authors/mpanicon"
+          className="hover:text-green-700"
+        >{`Dark Mode [mpanicon], `}</a>
+        <a
+          href="https://www.flaticon.com/uicons"
+          className="hover:text-green-700"
+        >{`CV Icon [UIcon]`}</a>
       </div>
 
       <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">

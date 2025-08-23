@@ -4,10 +4,15 @@ export interface ProjectInterface {
   description: string;
   images: string[];
   technologies: string[];
+  features?: string[];
+  funFact?: string;
   showcasable: boolean;
   isActivity?: boolean;
   collaborated?: boolean;
   recent?: boolean;
+  figma?: string;
+  repository?: string;
+  website?: string;
 }
 
 export const projectsData: ProjectInterface[] = [
@@ -25,6 +30,15 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/pango-adventure/pango-6.png",
     ],
     technologies: ["Django", "Tailwind", "jQuery", "TypeScript", "SQLite"],
+    features: [
+      "Gamified coding challenges that make learning Django fun and interactive",
+      "Step-by-step exercises with instant feedback on code submissions",
+      "Visual problem-solving inspired by Flex Froggy, tailored to Django concepts",
+      "Integrated playground for experimenting with Django fundamentals",
+      "Responsive interface built with Tailwind for smooth cross-device usage",
+      "Lightweight backend using Django + SQLite for easy deployment",
+    ],
+    funFact: "Currently being re-develop using a front-end framework (Vue)",
     showcasable: true,
   },
   {
@@ -48,6 +62,15 @@ export const projectsData: ProjectInterface[] = [
       "TypeScript",
       "SQLite",
     ],
+    features: [
+      "Order and production tracking for printing jobs with real-time status updates",
+      "Automated payment recording and outstanding balance monitoring",
+      "Role-based access for admins, workers, and production staff",
+      "MIS reports with filters for revenue, expenses, and job performance",
+      "Integration of Django REST API with React frontend for smooth user experience",
+      "Lightweight database layer with SQLite for fast and reliable storage",
+      "Simple setup process with preloaded reference data to quickly initialize the system",
+    ],
     showcasable: true,
   },
   {
@@ -69,7 +92,19 @@ export const projectsData: ProjectInterface[] = [
       "Tailwind",
       "MySQL",
     ],
+    features: [
+      "Contestant management with detailed profiles, photos, and achievements",
+      "Event tracking to archive pageants with dates, venues, and organizers",
+      "Result recording with categories, placements, and awards",
+      "Searchable archive for quick retrieval of contestants and event histories",
+      "Role-based access for administrators and staff to manage data securely",
+      "Responsive UI using Bootstrap components and Tailwind for consistency",
+      "Simple setup with preloaded reference data (categories, titles, sample events) for quick initialization",
+      "Have a Media Gallery for each events.",
+    ],
+    funFact: "This project is created by someone but I'm the one who continue it.",
     showcasable: true,
+    collaborated: true,
   },
   {
     id: 4,
@@ -91,6 +126,15 @@ export const projectsData: ProjectInterface[] = [
       "TypeScript",
       "Zod",
     ],
+    features: [
+      "Single-page interactive test with real-time score calculation",
+      "Personalized advice generated instantly based on test results",
+      "Google Authentication for secure and convenient user login",
+      "User progress and test history stored in MongoDB for quick retrieval",
+      "Form validation and input safety powered by Zod",
+      "Clean and responsive interface built with Tailwind for accessibility on all devices",
+      "Lightweight Next.js app optimized for fast performance",
+    ],
     showcasable: true,
   },
   {
@@ -111,6 +155,15 @@ export const projectsData: ProjectInterface[] = [
       "CSS3",
       "MySQL",
     ],
+    features: [
+      "Prototype platform for showcasing the concept of secondhand clothing e-commerce",
+      "Basic product listing with images, descriptions, and prices",
+      "Simple shopping cart functionality for simulating the buying experience",
+      "User registration and login with PHP and MySQL",
+      "Email notifications powered by PHPMailer for order simulations",
+      "Minimalistic UI styled with Tailwind and CSS3",
+      "Lightweight architecture using PHP and VanillaJS for quick prototyping",
+    ],
     showcasable: false,
   },
   {
@@ -126,6 +179,13 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/blogsite/next-blogsite-5.png",
     ],
     technologies: ["NextJS", "Figma", "Tailwind", "TypeScript"],
+    features: [
+      "Collaboratively developed blog platform using Next.js and TypeScript",
+      "Clean and responsive UI designed in Figma and implemented with Tailwind",
+      "Ability to create, edit, and delete blog posts with structured layouts",
+      "Dynamic routing for individual post pages with SEO-friendly URLs",
+      "Reusable components for consistent styling and faster development",
+    ],
     showcasable: true,
     collaborated: true,
   },
@@ -141,6 +201,12 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/react-ts-play/react-ts-4.png",
     ],
     technologies: ["React", "React-Router", "Tailwind", "TypeScript"],
+    features: [
+      "Login and signup functionality with client-side validation",
+      "Interactive Tic Tac Toe game in the Game Tab",
+      "Navigation handled with React Router for seamless page transitions",
+      "Lightweight playground project showcasing authentication and interactivity",
+    ],
     showcasable: true,
   },
   {
@@ -149,13 +215,21 @@ export const projectsData: ProjectInterface[] = [
     description:
       "A straightforward website developed using foundational web technologies, including HTML, CSS, basic JavaScript, and CSS frameworks.",
     images: [
-       "/assets/projects/html-blog/html-blog-1.png",
-       "/assets/projects/html-blog/html-blog-2.png",
-       "/assets/projects/html-blog/html-blog-3.png",
-       "/assets/projects/html-blog/html-blog-4.png",
-       "/assets/projects/html-blog/html-blog-5.png",
+      "/assets/projects/html-blog/html-blog-1.png",
+      "/assets/projects/html-blog/html-blog-2.png",
+      "/assets/projects/html-blog/html-blog-3.png",
+      "/assets/projects/html-blog/html-blog-4.png",
+      "/assets/projects/html-blog/html-blog-5.png",
     ],
     technologies: ["HTML5", "CC3", "Bootstrap", "Vanilla JS"],
+    features: [
+      "Static blog-style website built entirely with client-side technologies",
+      "Basic JavaScript interactivity for UI enhancements",
+      "Lightweight structure without backend or backend authentication features",
+      "Demonstrates foundational skills in HTML, CSS, and Vanilla JS",
+    ],
+    funFact:
+      "This will undergone a redevelopment and have a backend implemented.",
     showcasable: false,
   },
   // {
@@ -179,6 +253,12 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/figma-portfolio/figma-portfolio-3.png",
     ],
     technologies: ["Figma"],
+    features: [
+      "Portfolio website designed entirely in Figma",
+      "Interactive prototype built with Figma’s prototyping tools",
+      "Light and dark mode support through variable manipulation",
+      "Mobile-responsive layouts showcasing adaptability across devices",
+    ],
     showcasable: false,
   },
   {
@@ -192,6 +272,11 @@ export const projectsData: ProjectInterface[] = [
       "/assets/projects/figma-attendance/figma-attendance-3.png",
     ],
     technologies: ["Figma"],
+    features: [
+      "Commissioned UI design created in Figma for an Attendance Tracking System",
+      "Interactive prototype demonstrating key user flows and screen transitions",
+      "Built as a prototype deliverable for visualization before development",
+    ],
     showcasable: false,
   },
 ];

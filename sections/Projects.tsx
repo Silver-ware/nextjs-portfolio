@@ -6,16 +6,18 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { projectsData } from "@/data/projects";
+import { projectsData, ProjectInterface } from "@/data/projects";
 import ProjCards from "@/components/ProjectCard";
 import { useMediaQuery } from "@/components/use-media-query";
 import { useState, useMemo, useEffect } from "react";
 import ProjectOverlay from "@/components/ProjectOverlay";
+import ProjectMobile from "@/components/ProjectMobileView";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
   const [inputValue, setInputValue] = useState(currentPage.toString());
   const [overlayImages, setOverlayImages] = useState<string[] | null>(null);
+  const [mobileProjectView, setMobileProject] = useState<ProjectInterface | null>(null)
 
   useEffect(() => {
     setInputValue(currentPage.toString());
@@ -65,6 +67,7 @@ export default function Projects() {
             project={project}
             key={project.id}
             onOpenOverlay={setOverlayImages}
+            openMobileView={setMobileProject}
           />
         ))}
       </div>
@@ -75,6 +78,17 @@ export default function Projects() {
           onClose={() => setOverlayImages(null)}
         />
       )}
+
+      {
+        mobileProjectView && (
+          <ProjectMobile 
+            project={mobileProjectView}
+            closeMobileView={setMobileProject}
+            closedImages={setOverlayImages}
+            stillMobile={isSm}
+          />
+        )
+      }
 
       {/* Mobile Pagination */}
       <div className="flex w-full md:hidden items-center justify-end gap-1">

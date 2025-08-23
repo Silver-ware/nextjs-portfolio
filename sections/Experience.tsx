@@ -11,9 +11,11 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import AwardsOverlay from "@/components/AwardsOverlay";
 
 export default function Experience() {
   const [awardsVisibility, setAwardsVisibility] = useState<boolean>(false);
+  const [imageOverlay, setImageOverlay] = useState<string | null>(null);
 
   return (
     <section
@@ -29,7 +31,7 @@ export default function Experience() {
 
       <div className="inline-flex gap-2.5 md:flex-col flex-col-reverse items-start w-full">
         <div className="h-fit w-full rounded-xl overflow-hidden relative">
-          <div className="relative flex items-start pl-1 pr-4 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
+          <div className="relative flex items-start pl-1 pr-6 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
             {experienceData.map((experience, index) => (
               <ExpCards
                 experience={experience}
@@ -40,7 +42,7 @@ export default function Experience() {
           </div>
           <div
             className="absolute top-0 right-0 lg:w-[20%] md:w-[25%] w-[30%] h-full
-              bg-gradient-to-l from-green-700/50 to-transparent 
+              bg-gradient-to-l from-primary-gradient/50 to-transparent 
               pointer-events-none select-none"
           ></div>
         </div>
@@ -52,6 +54,7 @@ export default function Experience() {
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
               }}
               navigation
               spaceBetween={20}
@@ -61,12 +64,18 @@ export default function Experience() {
             >
               {awardsAndCertificatesData.map((awards) => (
                 <SwiperSlide key={awards.id}>
-                  <div className="bg-semi-transparent h-full justify-self-stretch flex flex-col md:flex-row gap-2 lg:gap-10 md:gap-8 rounded-xl pt-5 pb-9 px-8 md:px-10 lg:px-12">
-                    <div className="relative rounded w-full md:w-[40%] lg:w-1/2 overflow-hidden aspect-3/2">
+                  <div className="bg-semi-transparent h-full justify-self-stretch flex flex-col md:flex-row gap-2 lg:gap-10 md:gap-8 rounded-xl pt-5 pb-9 px-10 lg:px-12">
+                    <div
+                      className="relative cursor-pointer rounded w-full md:w-[40%] lg:w-1/2 overflow-hidden border border-neutral-700 bg-green-900/90 aspect-[3/2]
+                        bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.12)_1px,transparent_1px)]
+                        bg-[length:12px_12px] bg-repeat"
+                        onClick={() => setImageOverlay(awards.image)}
+                    >
                       <Image
-                        className="object-cover"
-                        src="/assets/images/certificate-placeholder.jpg"
+                        className="object-contain"
+                        src={awards.image}
                         alt="awards-placeholder"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 40vw, 50vw"
                         fill
                       />
                     </div>
@@ -105,6 +114,9 @@ export default function Experience() {
             Show relevant Awards & Certificates?
           </label>
         </div>
+
+        {/* Awards Image Overlay */}
+        {imageOverlay && <AwardsOverlay  image={imageOverlay} onClose={setImageOverlay}/>}
       </div>
     </section>
   );
