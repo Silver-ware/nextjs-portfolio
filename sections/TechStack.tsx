@@ -46,7 +46,7 @@ export default function TechStack() {
                       selectedStack.includes(tech.name)
                         ? "border-green-700 shadow-sm shadow-green-400"
                         : "border-neutral-700"
-                    } group cursor-pointer inline-flex items-center justify-center gap-2 px-3 lg:py-2 py-1 bg-semi-transparent rounded-[5px] border border-solid  hover:bg-green-700`}
+                    } group cursor-pointer inline-flex items-center justify-center gap-2 px-3 lg:py-2 py-1 bg-background dark:bg-semi-transparent rounded-[5px] border border-solid  dark:hover:bg-green-700 hover:bg-green-700`}
                     onClick={() =>
                       setSelectedStack((prev) =>
                         prev.includes(tech.name)
@@ -65,7 +65,7 @@ export default function TechStack() {
                         />
                       </span>
                     )}
-                    <div className="group-hover:text-[#e2e2e2] relative w-fit font-medium text-foreground md:text-lg text-base tracking-[0] leading-[normal]">
+                    <div className="group-hover:text-white relative w-fit font-medium text-foreground md:text-lg text-base tracking-[0] leading-[normal]">
                       {tech.name}
                     </div>
                   </button>

@@ -15,7 +15,7 @@ export default function ProjCards({
 }) {
   return (
     <Card
-      className="cursor-pointer flex flex-col w-[300px] h-fit items-start justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700
+      className="cursor-pointer flex flex-col w-[300px] h-fit items-start justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-background dark:bg-semi-transparent rounded-lg border border-solid border-neutral-700
         hover:scale-[102%] hover:border-title transition-all duration-250 ease-in"
     >
       <CardContent className="p-0 w-full">
