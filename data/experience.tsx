@@ -23,7 +23,7 @@ export const experienceData: ExperienceInterface[] = [
       "Assisted in building a company dashboard using Next.js and Tailwind CSS, focusing on UI components and API integration.",
     logo: "",
     contributions: {
-      heading: "Despite being an Intern here are my contributions:",
+      heading: "Despite being an Intern, I've made significant contributions:",
       list: [
         "Redesigned 20+ legacy UI screens in Figma, improving usability.",
         "Built a modern web app with Next.js from scratch.",
