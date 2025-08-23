@@ -61,6 +61,7 @@ export default function TechStack() {
                           className={`${tech.name !== "NextJS" && "drop-shadow-[2px_2px_0_black]"}`}
                           src={tech.icon}
                           alt={tech.name}
+                          sizes="(max-width: 768px) 18px, 28px"
                           fill
                         />
                       </span>

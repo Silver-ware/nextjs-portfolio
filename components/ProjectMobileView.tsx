@@ -37,6 +37,7 @@ export default function ProjectMobile({
         <Image
           src={project.images[0]}
           alt={`project-first-image`}
+          sizes="50vw"
           fill
           className="object-cover"
         />

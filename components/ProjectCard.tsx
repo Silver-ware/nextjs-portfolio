@@ -84,7 +84,12 @@ export default function ProjCards({
                   }}
                 >
                   <div className="self-stretch relative h-38 rounded overflow-hidden">
-                    <Image src={image} alt={`${project.title}-image`} fill />
+                    <Image
+                      src={image}
+                      alt={`${project.title}-image`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      fill
+                    />
                   </div>
                 </SwiperSlide>
               ))}

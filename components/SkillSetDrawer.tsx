@@ -101,12 +101,19 @@ export default function SkillSetDrawer() {
               <SwiperSlide key={info.title}>
                 <div className="bg-semi-transparent border border-neutral-700 md:max-w-[384px] max-w-[300px] mx-auto flex flex-col justify-center items-center text-center text-foreground w-full pt-2 pb-8 px-6 h-full flex-1 self-stretch rounded-md">
                   <span className="relative w-9 h-9">
-                    <Image src={info.icons} alt={info.title} fill />
+                    <Image
+                      src={info.icons}
+                      alt={info.title}
+                      sizes="36px"
+                      fill
+                    />
                   </span>
                   <span className="block font-semibold text-title md:text-xl text-lg">
                     {info.title}
                   </span>
-                  <span className="text-wrap md:text-sm text-xs">{info.details}</span>
+                  <span className="text-wrap md:text-sm text-xs">
+                    {info.details}
+                  </span>
                 </div>
               </SwiperSlide>
             ))}

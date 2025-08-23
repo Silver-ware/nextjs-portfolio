@@ -268,6 +268,7 @@ export default function Contact() {
                             className="group-hover:filter group-hover:invert group-hover:brightness-0 transition-all duration-300 ease-in-out"
                             src={social.icon}
                             alt={social.alt}
+                            sizes="(max-width: 768px) 36px, (max-width: 1024px) 44px, 50px"
                             fill
                           />
                         </div>
@@ -301,7 +302,12 @@ export default function Contact() {
                               : "lg:w-10 lg:h-10 w-8 h-8"
                           } relative z-20 opacity-30 hover:opacity-80 hover:scale-105 transition-all`}
                         >
-                          <Image src={icons.source} alt={icons.name} fill />
+                          <Image
+                            src={icons.source}
+                            alt={icons.name}
+                            sizes={"(max-width: 1024px) 32px, 40px"}
+                            fill
+                          />
                         </div>
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>

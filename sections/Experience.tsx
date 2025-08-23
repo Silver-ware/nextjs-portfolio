@@ -75,6 +75,7 @@ export default function Experience() {
                         className="object-contain"
                         src={awards.image}
                         alt="awards-placeholder"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 40vw, 50vw"
                         fill
                       />
                     </div>
