@@ -16,7 +16,7 @@ export default function ModeIcon() {
     return <div style={{ width: 35, height: 35 }} />;
   }
 
-  const src = theme === "dark" ? lightMode : darkMode;
+  const src = theme === "dark" ? darkMode : lightMode;
 
   return (
     <Image

@@ -338,6 +338,25 @@ export default function Contact() {
         </div>
       </div>
 
+      <div className="w-fit left-2 flex gap-0.5 h-fit text-center absolute bottom-2 text-foreground text-xs opacity-50">
+        <span>Icons: </span>
+        <a
+          href="https://www.flaticon.com/authors/any-icon"
+          className="hover:text-green-700"
+          title="Any Icon"
+        >
+          {`Light Mode [Any Icon], `}
+        </a>
+        <a
+          href="https://www.flaticon.com/authors/mpanicon"
+          className="hover:text-green-700"
+        >{`Dark Mode [mpanicon], `}</a>
+        <a
+          href="https://www.flaticon.com/uicons"
+          className="hover:text-green-700"
+        >{`CV Icon [UIcon]`}</a>
+      </div>
+
       <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
           className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"

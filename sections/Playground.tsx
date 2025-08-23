@@ -8,7 +8,7 @@ export default function Playground() {
       className="flex flex-col items-start gap-2.5 pt-[60px] pb-10 lg:px-[120px] md:px-[80px] px-[40px] w-full scroll-mt-[50px]"
     >
       <div className="flex flex-col lg:min-h-[600px] md:min-h-[500px] h-fit items-center gap-4 md:pt-10 pt-4 pb-5 px-4 w-full md:bg-semi-transparent rounded-xl md:border border-solid border-neutral-700">
-        <div className="p-0 w-full h-full self-stretch flex-1 flex flex-col items-center md:gap-4 gap-6">
+        <div className="p-0 w-full h-full self-stretch flex-1 flex flex-col items-center md:gap-4 gap-6 relative">
           <div className="inline-flex flex-col items-center md:gap-1.5">
             <div className="inline-flex items-center gap-2.5">
               <BugPlay className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
@@ -57,6 +57,16 @@ export default function Playground() {
                 fill
               />
             </span>
+          </div>
+
+          {/* Attribution of Programmer Sticker */}
+          <div className="w-full h-fit text-center absolute bottom-0 text-foreground">
+            <a
+            className="text-xs opacity-50"
+              href="https://www.flaticon.com/authors/medz"
+            >
+              Playground Sticker Created by MEDZ - Flaticon
+            </a>
           </div>
         </div>
       </div>

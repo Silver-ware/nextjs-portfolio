@@ -120,7 +120,7 @@ export default function Navbar() {
               <TooltipContent side="left" sideOffset={10}>
                 <div className="rounded backdrop-blur-sm bg-semi-transparent px-2 py-1.5 text-foreground text-center mt-1 transition-all duration-200    ease-in-out">
                   <span className="lg:text-sm text-xs">
-                    Switch to Light Mode
+                    Switch to {theme === "dark" ? "Light" : "Dark"} Mode.
                   </span>
                 </div>
               </TooltipContent>
