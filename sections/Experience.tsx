@@ -16,7 +16,10 @@ export default function Experience() {
   const [awardsVisibility, setAwardsVisibility] = useState<boolean>(false);
 
   return (
-    <section id="experience" className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full scroll-mt-[100px]">
+    <section
+      id="experience"
+      className="flex-col items-start px-0 py-2.5 flex gap-2.5 w-full scroll-mt-[100px]"
+    >
       <div className="inline-flex items-center gap-2.5">
         <BriefcaseBusiness className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
         <h2 className="relative w-fit font-semibold text-foreground lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
@@ -25,8 +28,8 @@ export default function Experience() {
       </div>
 
       <div className="inline-flex gap-2.5 md:flex-col flex-col-reverse items-start w-full">
-        <div className="h-fit w-full rounded-xl overflow-hidden">
-          <div className="flex items-start pl-1 pr-4 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
+        <div className="h-fit w-full rounded-xl overflow-hidden relative">
+          <div className="relative flex items-start pl-1 pr-4 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
             {experienceData.map((experience, index) => (
               <ExpCards
                 experience={experience}
@@ -35,6 +38,11 @@ export default function Experience() {
               />
             ))}
           </div>
+          <div
+            className="absolute top-0 right-0 lg:w-[20%] md:w-[25%] w-[30%] h-full
+              bg-gradient-to-l from-green-700/50 to-transparent 
+              pointer-events-none select-none"
+          ></div>
         </div>
 
         {awardsVisibility && (

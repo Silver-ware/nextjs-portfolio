@@ -1,6 +1,6 @@
 "use client";
 import { Computer } from "lucide-react";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import {
   Drawer,
@@ -19,22 +19,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import ExpertiseTable from "./ExpertiseTable";
 import { expertiseData } from "@/data/expertise";
-
-function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [matches, query]);
-
-  return matches;
-}
+import { useMediaQuery } from "./use-media-query";
 
 const skillSetMainInfo = [
   {
@@ -94,7 +79,7 @@ export default function SkillSetDrawer() {
           </span>
         </button>
       </DrawerTrigger>
-      <DrawerContent className="bg-semi-transparent flex flex-col items-center px-6 pt-3 pb-6 gap-3 backdrop-blur-md border-none text-foreground">
+      <DrawerContent className="bg-semi-transparent flex flex-col items-center px-6 pt-3 pb-6 gap-3 backdrop-blur-lg border-none text-foreground">
         <DrawerHeader className="hidden">
           <DrawerTitle className="hidden"></DrawerTitle>
           <DrawerDescription className="hidden"></DrawerDescription>
@@ -114,14 +99,14 @@ export default function SkillSetDrawer() {
           >
             {skillSetMainInfo.map((info) => (
               <SwiperSlide key={info.title}>
-                <div className="bg-semi-transparent border border-neutral-700 max-w-[384px] mx-auto flex flex-col justify-center items-center text-center text-foreground w-full pt-2 pb-8 px-6 h-full flex-1 self-stretch rounded-md">
+                <div className="bg-semi-transparent border border-neutral-700 md:max-w-[384px] max-w-[300px] mx-auto flex flex-col justify-center items-center text-center text-foreground w-full pt-2 pb-8 px-6 h-full flex-1 self-stretch rounded-md">
                   <span className="relative w-9 h-9">
                     <Image src={info.icons} alt={info.title} fill />
                   </span>
-                  <span className="block font-semibold text-green-500 text-xl">
+                  <span className="block font-semibold text-green-700 md:text-xl text-lg">
                     {info.title}
                   </span>
-                  <span className="text-wrap text-sm">{info.details}</span>
+                  <span className="text-wrap md:text-sm text-xs">{info.details}</span>
                 </div>
               </SwiperSlide>
             ))}

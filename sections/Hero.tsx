@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-3 lg:px-[110px] md:px-[60px] px-6 w-full h-fit scroll-mt-[100px] "
+      className="flex md:flex-row flex-col-reverse items-center justify-center gap-2.5 pt-[40px] pb-0 lg:px-[110px] md:px-[60px] px-6 w-full h-fit scroll-mt-[100px] "
     >
       <div className="flex flex-col flex-1 h-fit md:items-start items-center justify-center">
         <div className="inline-flex items-center">

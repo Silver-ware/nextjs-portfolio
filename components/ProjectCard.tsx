@@ -1,23 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ProjectInterface } from "@/data/projects";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
-export default function ProjCards({project}: {project: ProjectInterface}) {
+export default function ProjCards({
+  project,
+  onOpenOverlay,
+}: {
+  project: ProjectInterface;
+  onOpenOverlay: React.Dispatch<React.SetStateAction<string[] | null>>;
+}) {
   return (
     <Card
-      className="flex flex-col w-[300px] items-center justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700"
+      className="cursor-pointer flex flex-col w-[300px] h-fit items-start justify-center md:justify-self-start justify-self-center gap-3.5 px-4 py-5 bg-[#52525226] rounded-lg border border-solid border-neutral-700
+        hover:scale-[102%] hover:border-title transition-all duration-250 ease-in"
     >
       <CardContent className="p-0 w-full">
-        <div className="self-stretch relative h-36 rounded overflow-hidden">
-          <Image
-            src={project.image}
-            alt={`${project.title}-image`}
-            fill
-          />
-        </div>
+        <Swiper
+          className="projects-swiper"
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          pagination={{ clickable: true }}
+          onClick={() => onOpenOverlay(project.images)}
+        >
+          {project.images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="self-stretch relative h-38 rounded overflow-hidden">
+                <Image src={image} alt={`${project.title}-image`} fill />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
         <div className="flex flex-col items-start gap-1 mt-3.5 w-full">
           <div className="inline-flex items-start gap-2.5">
-            <h3 className="relative w-fit font-medium text-foreground md:text-xl text-[18px] tracking-[0] leading-[normal]">
+            <h3 className="relative w-fit font-medium text-title md:text-xl text-[18px] tracking-[0] leading-[normal]">
               {project.title}
             </h3>
           </div>
