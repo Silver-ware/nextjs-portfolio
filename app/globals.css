@@ -14,7 +14,7 @@
   --secondary-foreground: var(--color-neutral-600);
   --primary-outline: var(--color-neutral-700);
   --semi-transparent: oklch(69.67% 0.035 152.18 / var(--transparency));
-  --primary-gradient: #026B02; 
+  --primary-gradient: #026b02; 
   --title-color: var(--color-green-800)
 }
 
@@ -24,7 +24,7 @@
   --secondary-foreground: var(--color-neutral-400);
   --primary-outline: oklch(37.1% 0 0);
   --semi-transparent: #52525226;
-  --primary-gradient: #6fe76f40;
+  --primary-gradient: #85e48575;
   --title-color: var(--color-green-600)
 }
 

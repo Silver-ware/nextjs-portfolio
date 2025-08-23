@@ -103,7 +103,7 @@ export default function SkillSetDrawer() {
                   <span className="relative w-9 h-9">
                     <Image src={info.icons} alt={info.title} fill />
                   </span>
-                  <span className="block font-semibold text-green-700 md:text-xl text-lg">
+                  <span className="block font-semibold text-title md:text-xl text-lg">
                     {info.title}
                   </span>
                   <span className="text-wrap md:text-sm text-xs">{info.details}</span>

@@ -29,7 +29,7 @@ export default function Experience() {
 
       <div className="inline-flex gap-2.5 md:flex-col flex-col-reverse items-start w-full">
         <div className="h-fit w-full rounded-xl overflow-hidden relative">
-          <div className="relative flex items-start pl-1 pr-4 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
+          <div className="relative flex items-start pl-1 pr-6 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
             {experienceData.map((experience, index) => (
               <ExpCards
                 experience={experience}
@@ -40,7 +40,7 @@ export default function Experience() {
           </div>
           <div
             className="absolute top-0 right-0 lg:w-[20%] md:w-[25%] w-[30%] h-full
-              bg-gradient-to-l from-green-700/50 to-transparent 
+              bg-gradient-to-l from-primary-gradient/50 to-transparent 
               pointer-events-none select-none"
           ></div>
         </div>
