@@ -77,7 +77,7 @@ export default function TechStack() {
         {/* Show all button */}
         <div className="inline-flex w-fit justify-center items-center">
           <div
-            className="cursor-pointer inline-flex items-center justify-center gap-1 px-3 md:py-2 py-1 bg-semi-transparent rounded-[5px] border border-solid border-neutral-700 hover:bg-green-700"
+            className="group cursor-pointer inline-flex items-center justify-center gap-1 px-3 md:py-2 py-1 bg-semi-transparent rounded-[5px] border border-solid border-neutral-700 hover:bg-green-700"
             onClick={() =>
               setShowableList((prev) => {
                 const extraGroups = [
@@ -94,9 +94,9 @@ export default function TechStack() {
           >
             {" "}
             {stackShowableList.length === 5 ? (
-              <OctagonMinus className="md:w-6 w-4 md:h-6 h-4 text-foreground" />
+              <OctagonMinus className="md:w-6 w-4 md:h-6 h-4 group-hover:text-white text-foreground" />
             ) : (
-              <RectangleEllipsis className="md:w-7 w-5 md:h-7 h-5 text-foreground" />
+              <RectangleEllipsis className="md:w-7 w-5 md:h-7 h-5 group-hover:text-white text-foreground" />
             )}
           </div>
         </div>

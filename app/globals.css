@@ -135,6 +135,18 @@ div.projects-swiper .swiper-pagination-bullet {
   scrollbar-color: #16a34a #e5e7eb;
 }
 
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 0.25px white;
+  }
+  .text-stroke-sm {
+    -webkit-text-stroke: 1px white;
+  }
+  .text-stroke-lg {
+    -webkit-text-stroke: 3px white;
+  }
+}
+
 /* @layer base {
   * {
     @apply border-border outline-ring/50;

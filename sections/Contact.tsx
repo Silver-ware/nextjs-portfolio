@@ -94,7 +94,7 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col gap-2.5 lg:pt-6 pt-12 md:pb-[50px] pb-8 lg:px-[144px] px-8 w-full bg-semi-transparent relative md:scroll-mt-[100px] scroll-mt-[120px]"
+      className="flex flex-col gap-2.5 lg:pt-6 pt-12 pb-5 lg:px-[144px] px-8 w-full bg-semi-transparent relative md:scroll-mt-[100px] scroll-mt-[120px]"
     >
       {/* <div
         className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] 
@@ -246,13 +246,13 @@ export default function Contact() {
             </button>
           </div>
         </form>
-        <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] md:items-start items-center gap-3 lg:pl-10 lg:pr-5 md:pt-0 pt-8">
+        <div className="flex self-stretch flex-col flex-1 lg:min-w-[45%] md:min-w-[35%] items-center gap-3 lg:pl-10 lg:pr-5 md:pt-0 pt-8">
           <h3 className="relative w-fit font-semibold text-foreground lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
             Socials
           </h3>
 
           <div className="w-full self-stretch flex-1 flex flex-col lg:justify-between md:gap-20 gap-14">
-            <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full lg:pt-6 md:pt-4 pb-0">
+            <div className="inline-flex flex-row items-start justify-center lg:gap-8 md:gap-6 gap-3 w-full md:pt-2 pb-0">
               {socialLinksData.map((social, index) => (
                 <TooltipProvider key={social.alt}>
                   <Tooltip>
@@ -285,7 +285,7 @@ export default function Contact() {
                 </TooltipProvider>
               ))}
             </div>
-            <div className="self-stretch basis-1/2 flex flex-col gap-4 lg:justify-end justify-center items-center text-secondary-foreground flex-1">
+            <div className="self-stretch basis-1/2 flex flex-col gap-4 justify-center items-center text-secondary-foreground flex-1">
               <span className="md:text-lg text-base opacity-40">
                 Develop with:
               </span>
