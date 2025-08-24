@@ -79,7 +79,7 @@ export default function SkillSetDrawer() {
           </span>
         </button>
       </DrawerTrigger>
-      <DrawerContent className="bg-background/50 flex flex-col justify-center items-center px-6 pt-3 pb-6 gap-3 blur-box text-foreground">
+      <DrawerContent className="bg-background/50 flex flex-col justify-center items-center px-6 pt-3 pb-6 gap-3 sm:backdrop-blur-md mobile-blur-md text-foreground">
         <DrawerHeader className="hidden">
           <DrawerTitle className="hidden"></DrawerTitle>
           <DrawerDescription className="hidden"></DrawerDescription>
@@ -176,6 +176,7 @@ export default function SkillSetDrawer() {
             </div>
           </div>
           <ExpertiseTable sortedData={sortedExpertiseData} />
+          <span className="text-[10px] text-center opacity-50 py-1">Note: No. of projects may not have match the projects presented.</span>
         </div>
         <DrawerFooter className="hidden">
           <DrawerClose>

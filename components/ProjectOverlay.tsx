@@ -14,7 +14,7 @@ export default function ProjectOverlay({
 }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center lg:backdrop-blur-xs backdrop-blur-sm bg-background/25"
+      className="fixed inset-0 z-50 flex items-center justify-center md:backdrop-blur-xs mobile-blur-sm bg-background/25"
       onClick={() => onClose(null)}
     >
       <button

@@ -27,7 +27,7 @@ export function CopyEmail({ email }: { email: string }) {
           </span>
         </TooltipTrigger>
         <TooltipContent align="center" side="bottom">
-          <div className="px-3 py-1 mt-2 font-quantico lg:backdrop-blur-xs backdrop-blur-sm lg:text-base text-sm rounded text-foreground bg-semi-transparent border border-primary-outline">
+          <div className="px-3 py-1 mt-2 font-quantico sm:backdrop-blur-xs mobile-blur-xs lg:text-base text-sm rounded text-foreground bg-semi-transparent border border-primary-outline">
             Copied!
           </div>
         </TooltipContent>

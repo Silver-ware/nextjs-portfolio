@@ -132,7 +132,7 @@ export default function ProjCards({
         sideOffset={10}
         align="start"
         side="right"
-        className="bg-background/90 lg:backdrop-blur-md backdrop-blur-sm text-foreground border-neutral-700"
+        className="bg-background/90 sm:backdrop-blur-md mobile-blur-md text-foreground border-neutral-700"
       >
         {project.funFact && (
           <span className="block text-title leading-4 text-center pb-2 font-medium text-base">

@@ -23,7 +23,7 @@ export default function ProjectMobile({
 
   return (
     <div
-      className="fixed inset-0 z-[40] flex flex-col items-center justify-center gap-2 lg:backdrop-blur-xs backdrop-blur-sm bg-background/75 px-10 pt-4 pb-2"
+      className="fixed inset-0 z-[40] flex flex-col items-center justify-center gap-2 sm:backdrop-blur-xs mobile-blur-xs bg-background/75 px-10 pt-4 pb-2"
       // onClick={() => closeMobileView(null)}
     >
       <button

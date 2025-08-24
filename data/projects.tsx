@@ -90,7 +90,6 @@ export const projectsData: ProjectInterface[] = [
       "jQuery",
       "Bootstrap Components",
       "Tailwind",
-      "MySQL",
     ],
     features: [
       "Contestant management with detailed profiles, photos, and achievements",
@@ -102,7 +101,7 @@ export const projectsData: ProjectInterface[] = [
       "Simple setup with preloaded reference data (categories, titles, sample events) for quick initialization",
       "Have a Media Gallery for each events.",
     ],
-    funFact: "This project is created by someone but I'm the one who continue it.",
+    funFact: "The project was initiated by another person, and I took over to carry it forward.",
     showcasable: true,
     collaborated: true,
   },
