@@ -168,7 +168,7 @@ export default function Contact() {
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.name
-                  ? "-top-[18px] opacity-100"
+                  ? "-top-[18px] opacity-100 bg-background"
                   : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
               } peer-focus:border-neutral-700 transition-all duration-200`}
             >
@@ -190,7 +190,7 @@ export default function Contact() {
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.email
-                  ? "-top-[18px] opacity-100"
+                  ? "-top-[18px] opacity-100 bg-background"
                   : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
               } peer-focus:border-neutral-700 transition-all duration-200`}
             >
@@ -212,7 +212,7 @@ export default function Contact() {
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.subject
-                  ? "-top-[18px] opacity-100"
+                  ? "-top-[18px] opacity-100 bg-background"
                   : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
               } peer-focus:border-neutral-700 transition-all duration-200`}
             >
@@ -220,15 +220,29 @@ export default function Contact() {
             </span>
           </label>
 
-          <textarea
-            placeholder="Message"
+          <label htmlFor="message" className="w-full relative z-50">
+            <textarea
+            // placeholder="Message"
             required
+            id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full
-              text-wrap max-h-[160px] h-[160px] w-full bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground placeholder-neutral-700"
+            className="peer custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full
+              text-wrap max-h-[160px] h-[160px] w-full bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
           />
+            <span
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
+                !!formData.message
+                  ? "-top-[18px] opacity-100 bg-background"
+                  : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
+              } peer-focus:border-neutral-700 transition-all duration-200`}
+            >
+              Message
+            </span>
+          </label>
+
+          
 
           <div className="flex items-center justify-end gap-2.5 w-full rounded">
             <button
