@@ -15,7 +15,7 @@
   --primary-outline: var(--color-neutral-700);
   --semi-transparent: oklch(69.67% 0.035 152.18 / var(--transparency));
   --primary-gradient: #026b02; 
-  --title-color: var(--color-green-800)
+  --title-color: var(--color-green-900)
 }
 
 .dark {
@@ -25,13 +25,14 @@
   --primary-outline: oklch(37.1% 0 0);
   --semi-transparent: #52525226;
   --primary-gradient: #85e48575;
-  --title-color: var(--color-green-600)
+  --title-color: var(--color-green-700)
 }
 
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-xs: 20rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -39,6 +40,13 @@
   --color-semi-transparent: var(--semi-transparent);
   --color-primary-gradient: var(--primary-gradient);
   --color-title: var(--title-color)
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  /* Match all Tailwind blur utilities */
+  [class*="backdrop-blur"] {
+    background-color: oklch(var(--background) / 0.8);
+  }
 }
 
 body {

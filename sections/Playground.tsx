@@ -12,7 +12,7 @@ export default function Playground() {
           <div className="inline-flex flex-col items-center md:gap-1.5">
             <div className="inline-flex items-center gap-2.5">
               <BugPlay className="md:w-6 w-[18px] md:h-6 h-[18px] stroke-current text-[#16A34A]" />
-              <h2 className="relative w-fit font-semibold text-green-600 lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
+              <h2 className="relative w-fit font-semibold text-title lg:text-[28px] md:text-2xl text-xl tracking-[0] leading-[normal]">
                 Playground
               </h2>
             </div>
@@ -60,7 +60,7 @@ export default function Playground() {
           </div>
 
           {/* Attribution of Programmer Sticker */}
-          <div className="w-full h-fit text-center absolute bottom-0 text-foreground">
+          <div className="md:block hidden w-full h-fit text-center absolute bottom-0 text-foreground">
             <a
             className="text-xs opacity-50"
               href="https://www.flaticon.com/authors/medz"

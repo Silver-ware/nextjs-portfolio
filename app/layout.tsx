@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins, Quantico } from "next/font/google";
 import Navbar from "@/sections/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeColor from "@/components/theme-color";
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ThemeColor/>
           <Navbar />
           {children}
         </ThemeProvider>
