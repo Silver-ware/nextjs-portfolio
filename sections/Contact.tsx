@@ -152,7 +152,7 @@ export default function Contact() {
       <div className="flex md:flex-row flex-col items-start gap-2.5 px-0 pb-1 lg:pt-6 pt-2 w-full">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-start lg:gap-3 gap-2 pl-0 md:pr-5 py-0 lg:flex-1 w-full relative z-0"
+          className="flex flex-col items-start lg:gap-3 gap-2.5 pl-0 md:pr-5 py-0 lg:flex-1 w-full relative z-0"
         >
           <label htmlFor="name" className="w-full relative z-50">
             <input
