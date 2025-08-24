@@ -2,7 +2,6 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { experienceData } from "@/data/experience";
 import { awardsAndCertificatesData } from "@/data/awards";
-import ExpCards from "@/components/ExperienceCard";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -12,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AwardsOverlay from "@/components/AwardsOverlay";
+import ExperienceScroller from "@/components/ExperienceScroller";
 
 export default function Experience() {
   const [awardsVisibility, setAwardsVisibility] = useState<boolean>(false);
@@ -31,18 +31,10 @@ export default function Experience() {
 
       <div className="inline-flex gap-2.5 md:flex-col flex-col-reverse items-start w-full">
         <div className="h-fit w-full rounded-xl overflow-hidden relative">
-          <div className="relative flex items-start pl-1 pr-6 py-5 w-full bg-semi-transparent rounded-xl overflow-x-auto custom-scrollbar">
-            {experienceData.map((experience, index) => (
-              <ExpCards
-                experience={experience}
-                index={index}
-                key={experience.id}
-              />
-            ))}
-          </div>
+          <ExperienceScroller experiences={experienceData}/>
           <div
-            className="absolute top-0 right-0 lg:w-[20%] md:w-[25%] w-[30%] h-full
-              bg-gradient-to-l from-primary-gradient/50 to-transparent 
+            className="absolute top-0 right-0 lg:w-[20%] md:w-[25%] sm:w-[20%] xs:w-[12%] h-full
+              bg-gradient-to-l sm:from-primary-gradient/50 xs:from-primary-gradient/20   to-transparent 
               pointer-events-none select-none"
           ></div>
         </div>

@@ -22,7 +22,7 @@ export default function ExpCards({
   return (
     <div
       className={`inline-flex  flex-col items-start gap-3 px-0 py-4 w-fit ${
-        !experience.relevant && "opacity-50"
+        !experience.relevant && "lg:opacity-50 opacity-90"
       } hover:opacity-100 transition-opacity duration-200 ease-in-out cursor-pointer`}
     >
       <div className="flex relative items-center gap-2.5 pl-6 pr-0 py-0 w-full">
@@ -62,7 +62,7 @@ export default function ExpCards({
                     <span className="block lg:hidden my-2 md:text-sm text-xs text-center opacity-50">
                       Tap to View Contributions
                     </span>
-                    <div className="lg:flex hidden group-hover:-translate-y-[100%] z-[-1] group-hover:opacity-100 h-fit opacity-0 transition-all duration-300 ease-in-out absolute items-center gap-1 top-0 -translate-y-[80%] bg-semi-transparent px-3 py-1 backdrop-blur-xs rounded-t-sm right-3 text-foreground border-x border-t border-neutral-700 w-fit select-none">
+                    <div className="lg:flex hidden group-hover:-translate-y-[100%] z-[-1] group-hover:opacity-100 h-fit opacity-0 transition-all duration-300 ease-in-out absolute items-center gap-1 top-0 -translate-y-[80%] bg-semi-transparent px-3 py-1 lg:backdrop-blur-xs backdrop-blur-sm rounded-t-sm right-3 text-foreground border-x border-t border-neutral-700 w-fit select-none">
                       <Eye className="w-5 h-5" />
                       <span>View Contributions</span>
                     </div>
@@ -75,7 +75,7 @@ export default function ExpCards({
                 sideOffset={isSm ? 15 : 30}
                 align="center"
                 side={isSm ? "bottom" : "right"}
-                className="bg-semi-transparent backdrop-blur-md text-foreground border-neutral-700"
+                className="bg-semi-transparent lg:backdrop-blur-md backdrop-blur-sm text-foreground border-neutral-700"
               >
                 <span className="block leading-4 text-center font-medium text-base">
                   {experience.contributions.heading}

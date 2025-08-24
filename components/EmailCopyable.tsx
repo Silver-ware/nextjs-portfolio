@@ -21,13 +21,13 @@ export function CopyEmail({ email }: { email: string }) {
         <TooltipTrigger asChild>
           <span
             onClick={handleCopy}
-            className="cursor-copy w-fit font-quantico font-bold text-foreground lg:text-xl text-base tracking-[0] leading-[normal]"
+            className="cursor-copy w-fit font-quantico font-bold text-foreground lg:text-xl text-base tracking-[0] leading-[normal] hover:text-title" 
           >
             {email}
           </span>
         </TooltipTrigger>
         <TooltipContent align="center" side="bottom">
-          <div className="px-3 py-1 mt-2 font-quantico backdrop-blur-xs lg:text-base text-sm rounded text-foreground bg-semi-transparent border border-primary-outline">
+          <div className="px-3 py-1 mt-2 font-quantico lg:backdrop-blur-xs backdrop-blur-sm lg:text-base text-sm rounded text-foreground bg-semi-transparent border border-primary-outline">
             Copied!
           </div>
         </TooltipContent>

@@ -94,39 +94,39 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col gap-2.5 lg:pt-6 pt-12 pb-5 lg:px-[144px] px-8 w-full bg-semi-transparent relative md:scroll-mt-[100px] scroll-mt-[120px]"
+      className="flex flex-col gap-2.5 lg:pt-6 pt-12 pb-5 lg:px-[144px] px-8 w-full bg-semi-transparent relative md:scroll-mt-[100px] scroll-mt-[120px] overflow-visible"
     >
       {/* <div
         className="absolute w-full lg:h-[120px] md:h-[100px] h-[80px] 
           lg:top-[-120px] md:top-[-100px] top-[-80px] 
           left-1/2 -translate-x-1/2 scale-y-[-1] 
-          bg-[url('/assets/svg/waves-opacity.svg')] bg-no-repeat bg-top 
+          bg-[url('/assets/svg/waves-opacity.png')] bg-no-repeat bg-top 
           bg-[length:130%_100%] md:bg-[length:115%_100%] lg:bg-[length:100%_100%]"
       ></div> */}
-      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] lg:top-[-120px] md:top-[-100px] top-[-80px] left-[50%] -translate-x-[50%] scale-y-[-1]">
+      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] sm:h-[80px] xs:h-[60px] lg:top-[-120px] md:top-[-100px] sm:top-[-80px] xs:top-[-60px] left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
-          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
-          src="/assets/svg/waves-opacity.svg"
+          className="object-cover xs:scale-x-[1] sm:scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves-opacity.png"
           alt="transparent-svg-1"
           fill
         />
         <Image
-          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
-          src="/assets/svg/waves-opacity.svg"
+          className="object-cover xs:scale-x-[1] sm:scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves-opacity.png"
           alt="transparent-sv-2"
           fill
         />
       </div>
-      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] top-0 left-[50%] -translate-x-[50%]">
+      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] sm:h-[80px] xs:h-[60px] top-0 left-[50%] -translate-x-[50%]">
         <Image
-          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
-          src="/assets/svg/waves.svg"
+          className="object-cover xs:scale-x-[1] sm:scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves.png"
           alt="transparent-svg-1"
           fill
         />
         <Image
-          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
-          src="/assets/svg/waves-opacity.svg"
+          className="object-cover xs:scale-x-[1] sm:scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves-opacity.png"
           alt="transparent-sv-2"
           fill
         />
@@ -163,7 +163,7 @@ export default function Contact() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground focus:placeholder-transparent"
+              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
@@ -185,7 +185,7 @@ export default function Contact() {
               placeholder="Email"
               required
               onChange={handleChange}
-              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground focus:placeholder-transparent"
+              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
@@ -207,7 +207,7 @@ export default function Contact() {
               required
               name="subject"
               onChange={handleChange}
-              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground focus:placeholder-transparent"
+              className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
               className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
@@ -338,7 +338,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="w-fit left-2 flex gap-0.5 h-fit text-center absolute bottom-2 text-foreground text-xs opacity-50">
+      <div className="w-fit left-2 md:flex hidden gap-0.5 h-fit text-center absolute bottom-2 text-foreground text-xs opacity-50">
         <span>Icons: </span>
         <a
           href="https://www.flaticon.com/authors/any-icon"
@@ -357,10 +357,10 @@ export default function Contact() {
         >{`CV Icon [UIcon]`}</a>
       </div>
 
-      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] h-[80px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
+      <div className="absolute w-full select-none pointer-events-none overflow-hidden lg:h-[120px] md:h-[100px] sm:h-[80px] xs:h-[60px] bottom-0 left-[50%] -translate-x-[50%] scale-y-[-1]">
         <Image
-          className="object-cover scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
-          src="/assets/svg/waves-opacity.svg"
+          className="object-cover xs:scale-x-[1] sm:scale-x-[1.3] md:scale-x-[1.15] lg:scale-100"
+          src="/assets/svg/waves-opacity.png"
           alt="transparent-sv-2"
           fill
         />
