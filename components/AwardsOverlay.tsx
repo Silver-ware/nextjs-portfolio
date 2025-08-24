@@ -9,7 +9,7 @@ export default function AwardsOverlay({
 }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center lg:backdrop-blur-xs backdrop-blur-sm bg-background/50"
+      className="fixed inset-0 z-50 flex items-center justify-center sm:backdrop-blur-xs mobile-blur-xs bg-background/50"
       onClick={() => onClose(null)}
     >
       <button
