@@ -157,7 +157,7 @@ export default function Contact() {
           <label htmlFor="name" className="w-full relative z-50">
             <input
               type="text"
-              placeholder="Name"
+              // placeholder="Name"
               id="name"
               name="name"
               required
@@ -166,11 +166,11 @@ export default function Contact() {
               className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
-              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.name
                   ? "-top-[18px] opacity-100"
-                  : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
-              } bg-background peer-focus:border peer-focused:border-foreground transition-all duration-200`}
+                  : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
+              } peer-focus:border-neutral-700 transition-all duration-200`}
             >
               Name
             </span>
@@ -182,17 +182,17 @@ export default function Contact() {
               id="email"
               name="email"
               value={formData.email}
-              placeholder="Email"
+              // placeholder="Email"
               required
               onChange={handleChange}
               className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
-              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.email
                   ? "-top-[18px] opacity-100"
-                  : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
-              } bg-background peer-focus:border peer-focused:border-foreground transition-all duration-200`}
+                  : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
+              } peer-focus:border-neutral-700 transition-all duration-200`}
             >
               Emaill
             </span>
@@ -202,7 +202,7 @@ export default function Contact() {
             <input
               type="text"
               id="subject"
-              placeholder="Subject"
+              // placeholder="Subject"
               value={formData.subject}
               required
               name="subject"
@@ -210,11 +210,11 @@ export default function Contact() {
               className="peer w-full items-center px-5 py-2.5 bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
             />
             <span
-              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 ${
+              className={`absolute text-secondary-foreground py-[1px] font-semibold lg:text-base text-sm rounded px-2 left-3 border border-transparent ${
                 !!formData.subject
                   ? "-top-[18px] opacity-100"
-                  : "top-[10px] opacity-0  peer-focus:opacity-100 peer-focus:-top-[18px]"
-              } bg-background peer-focus:border peer-focused:border-foreground transition-all duration-200`}
+                  : "top-[10px] opacity-80  peer-focus:opacity-100 peer-focus:-top-[18px] peer-focus:bg-background"
+              } peer-focus:border-neutral-700 transition-all duration-200`}
             >
               Subject
             </span>
@@ -226,7 +226,8 @@ export default function Contact() {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full text-wrap max-h-[160px] h-[160px] w-full bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground"
+            className="custom-scrollbar flex items-start gap-2.5 pt-2.5 px-5 max-w-full
+              text-wrap max-h-[160px] h-[160px] w-full bg-semi-transparent rounded border border-solid border-neutral-700 text-secondary-foreground lg:text-base text-sm font-semibold outline-0 focus:border-foreground placeholder-neutral-700"
           />
 
           <div className="flex items-center justify-end gap-2.5 w-full rounded">

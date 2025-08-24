@@ -79,7 +79,7 @@ export default function SkillSetDrawer() {
           </span>
         </button>
       </DrawerTrigger>
-      <DrawerContent className="bg-background/50 flex flex-col justify-center items-center px-6 pt-3 pb-6 gap-3 lg:backdrop-blur-lg backdrop-blur-sm text-foreground">
+      <DrawerContent className="flex flex-col justify-center items-center px-6 pt-3 pb-6 gap-3 blur-box text-foreground">
         <DrawerHeader className="hidden">
           <DrawerTitle className="hidden"></DrawerTitle>
           <DrawerDescription className="hidden"></DrawerDescription>
