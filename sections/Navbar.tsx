@@ -88,7 +88,7 @@ export default function Navbar() {
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <a
-                  href="/assets/files/resume.pdf"
+                  href="/assets/files/garry-caber-cv.pdf"
                   download={"garry-caber-resume.pdf"}
                   className="relative inline-flex items-center lg:w-[32px] md:w-7 w-6 lg:h-[30px] md:h-[26px] h-[23px] justify-center px-[5px] py-0"
                 >
