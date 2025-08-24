@@ -56,7 +56,7 @@ export default function Navbar() {
 
   return (
     <header className="flex w-full h-fit items-center md:justify-between gap-2.5 lg:px-[25px] md:px-3 pl-[25px] pr-3 lg:py-2.5 md:py-1.5 py-2.5 bg-background border-b border-primary-outline sticky top-0 z-20">
-      <div className="inline-flex md:w-fit w-full items-center justify-center lg:pl-5 lg:pr-2.5 md:pl-3 md:pr-1 pl-5 pr-2.5 py-2.5">
+      <div className="inline-flex md:w-fit w-full items-center justify-center lg:pl-5 lg:pr-2.5 md:pl-3 md:pr-1 xs:pl-5 xs:pr-2.5 pl-2 pr-0.5 py-2.5 overflow-x-auto">
         <CopyEmail email={"garryworkwithit@gmail.com"} />
       </div>
 

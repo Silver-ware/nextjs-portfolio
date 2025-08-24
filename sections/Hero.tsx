@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
 
         <div className="inline-flex md:py-2 items-center gap-2.5">
-          <h2 className="relative w-fit font-extrabold text-foreground lg:text-5xl md:text-[42px] text-[28px] tracking-[0] md:leading-[40px] leading-normal">
+          <h2 className="relative w-fit font-extrabold text-foreground lg:text-5xl md:text-[42px] text-[28px] tracking-[0] md:leading-[40px] sm:text-left text-center xs:leading-normal leading-6">
             Full Stack Developer
           </h2>
         </div>
