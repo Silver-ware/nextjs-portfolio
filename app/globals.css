@@ -43,14 +43,14 @@
 }
 
 .blur-box {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  /* background-color: rgba(255, 255, 255, 0.3) !important; */
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important; 
 }
 
 @supports not ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
   .blur-box {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
