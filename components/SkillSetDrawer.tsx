@@ -176,6 +176,7 @@ export default function SkillSetDrawer() {
             </div>
           </div>
           <ExpertiseTable sortedData={sortedExpertiseData} />
+          <span className="text-[10px] text-center opacity-50 py-1">Note: No. of projects may not have match the projects presented.</span>
         </div>
         <DrawerFooter className="hidden">
           <DrawerClose>
