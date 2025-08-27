@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useScrollLock } from "./hide-body-scrollbar";
 
 export default function ProjectOverlay({
   images,
@@ -12,6 +14,7 @@ export default function ProjectOverlay({
   images: string[];
   onClose: React.Dispatch<React.SetStateAction<string[] | null>>;
 }) {
+  useScrollLock(true);
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center md:backdrop-blur-xs mobile-blur-sm bg-background/25"
@@ -23,7 +26,10 @@ export default function ProjectOverlay({
       >
         ✕
       </button>
-      <div className="lg:w-[70vw] md:w-[80vw] w-[90vw] h-fit lg:rounded-2xl rounded-sm border-1 border-neutral-700" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="lg:w-[70vw] md:w-[80vw] w-[90vw] h-fit lg:rounded-2xl rounded-sm border-1 border-neutral-700"
+        onClick={(e) => e.stopPropagation()}
+      >
         <Swiper
           className="lg:w-[70vw] md:w-[80vw] w-[90vw] h-auto my-0 lg:rounded-2xl rounded-sm "
           modules={[Pagination, Autoplay, Navigation]}
