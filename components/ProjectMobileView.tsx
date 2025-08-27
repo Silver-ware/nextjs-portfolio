@@ -2,6 +2,7 @@ import { ProjectInterface } from "@/data/projects";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useScrollLock } from "./hide-body-scrollbar";
 
 
 export default function ProjectMobile({
@@ -21,6 +22,7 @@ export default function ProjectMobile({
     if(!stillMobile) closeMobileView(null);
   }, [closeMobileView, stillMobile])
 
+  useScrollLock(true);
   return (
     <div
       className="fixed inset-0 z-[40] flex flex-col items-center justify-center gap-2 sm:backdrop-blur-xs mobile-blur-xs bg-background/75 px-10 pt-4 pb-2"

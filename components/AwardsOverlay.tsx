@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image";
+import { useScrollLock } from "./hide-body-scrollbar";
 
 export default function AwardsOverlay({
   image,
@@ -7,6 +9,8 @@ export default function AwardsOverlay({
   image: string;
   onClose: React.Dispatch<React.SetStateAction<string | null>>;
 }) {
+  useScrollLock(true);
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center sm:backdrop-blur-xs mobile-blur-xs bg-background/50"
