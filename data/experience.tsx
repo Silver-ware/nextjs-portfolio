@@ -18,7 +18,7 @@ export const experienceData: ExperienceInterface[] = [
     id: 1,
     position: "Front-end Developer (NextJS)",
     company: "Symphonics Co. LTD",
-    period: "February 2025 - March 2025",
+    period: "February 2025 - May 2025",
     description:
       "Assisted in building a company dashboard using Next.js and Tailwind CSS, focusing on UI components and API integration.",
     logo: "",
@@ -36,7 +36,7 @@ export const experienceData: ExperienceInterface[] = [
     id: 2,
     position: "SK Kagawad - Budget Monitoring Officer",
     company: "Brgy. Tinaogan SK",
-    period: "February 2023 - December 2024",
+    period: "February 2022 - December 2024",
     description:
       "Responsible for monitoring and reviewing SK fund utilization to ensure transparency, accountability, and alignment with approved projects and programs.",
     logo: "",
