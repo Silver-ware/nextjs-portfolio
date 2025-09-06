@@ -1,25 +1,27 @@
-🚀 My Portfolio – Built with Next.js
+# Personal Portfolio 🚀  
 
-🌐 Personal portfolio website built with Next.js and Tailwind CSS.
-Showcasing my projects, skills, and experience in a sleek, responsive design with built-in dark/light mode support.
+A **modern, fast, and responsive portfolio website** built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).  
+This project highlights my **work, skills, and experience**, while providing a sleek user experience with **dark/light mode** and **full mobile responsiveness**.  
 
+---
 
-✨ Features:
+## ✨ Features  
+- ⚡ **Blazing fast** performance powered by Next.js  
+- 🎨 **Modern UI** styled with Tailwind CSS  
+- 🌙 **Dark/Light mode** toggle for personalized viewing  
+- 📱 **Fully responsive** across all devices  
+- 🖼️ Sections for **projects, skills, and experience**  
+- 🧩 Easy to customize and extend  
 
-	⚡ Next.js 14 – optimized for performance and SEO
-	🎨 Tailwind CSS – easy and customizable styling
-	🌗 Dark / Light mode with next-themes
-	📱 Responsive design – works on mobile, tablet, and desktop
-	📝 Projects & Experience sections
-	📧 Contact form integration (e.g., Resend / EmailJS / Formspree)
-	🔍 SEO-friendly metadata & Open Graph tags
+---
 
+## 🛠️ Tech Stack  
+- **Framework:** [Next.js](https://nextjs.org/)  
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)  
+- **Icons:** [Lucide](https://lucide.dev/) / [Heroicons](https://heroicons.com/)  
+- **Deployment:** [Vercel](https://vercel.com/) (recommended)  
 
-🛠️ Tech Stack
+---
 
-	Next.js
-	TypeScript
-	Tailwind CSS
- 	Figma
-	ShadCN UI
-	next-themes
+## 🚀 Getting Started
+
